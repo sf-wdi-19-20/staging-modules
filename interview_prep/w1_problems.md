@@ -44,22 +44,23 @@ numberProperty(10) // ==> [false, true,  true]
 
 ##Problem 5: Algorithm Analysis
 
-1. Write a function called `compare` that compares two numbers. The function should return `1` if the first number is greater than the second, `0` if they are equal, or `-1` if the first number is less than the second. How many calculations does your function do?
+1. Write a function called `compare` that compares two numbers. The function should return `1` if the first number is greater than the second, `0` if they are equal, or `-1` if the first number is less than the second.    
+    How many calculations does your function do?
 
-1. Write a function to find the middle element in an array.  How many calculations (including comparisons) does your function do for:
-    the input array [0,4,5]
-    the input array [2,4,6,8,10,12,14,16,18,20]
-    an input array with 8 elements
-    any input array with `n` elements
+1. Write a function to find the middle element in an array.  How many calculations (including comparisons) does your function do for:   
+    the input array [0,4,5]   
+    the input array [2,4,6,8,10,12,14,16,18,20]   
+    an input array with 8 elements    
+    any input array with `n` elements   
     
-1. Write a function to find the maximum element in an array. How many calculations (including comparisons) does your function do for:
-    the input array [0,4,5]
-    the input array [2,4,6,8,10,12,14,16,18,20]
-    any input array with 8 elements
-    any input array with `n` elements
+1. Write a function to find the maximum element in an array. How many calculations (including comparisons) does your function do for:    
+    the input array [0,4,5]    
+    the input array [2,4,6,8,10,12,14,16,18,20]   
+    any input array with 8 elements     
+    any input array with `n` elements    
 
-1. Write a function called `indexOf` that takes in a number and an array and searches for the number in the array. If the number is in the array, it should return the array index where it found the number. If the number is not in the array, it should return `null`.  How many calculations (including comparisons) does your function do for:
-    the input array [0,4,5]
-    the input array [2,4,6,8,10,12,14,16,18,20]
-    any input array with 8 elements
-    any input array with `n` elements
+1. Write a function called `indexOf` that takes in a number and an array and searches for the number in the array. If the number is in the array, it should return the array index where it found the number. If the number is not in the array, it should return `null`.  How many calculations (including comparisons) does your function do for:    
+    the input array [0,4,5]    
+    the input array [2,4,6,8,10,12,14,16,18,20]   
+    any input array with 8 elements    
+    any input array with `n` elements    
