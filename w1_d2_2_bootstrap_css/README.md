@@ -2,19 +2,15 @@
 | Objectives |
 | :--- |
 | Explain why UX is important as a developer |
-| Apply basic UX principles to your projects |
 | Build a static webpage with HTML and CSS (review) |
 | Add the Bootstrap library to your projects |
-
-## Activity (5 mins)
-  * Draw your favorite website on the table
 
 ## UX & UI
   * UX = User Experience
   * UI = User Interface
 
 **Key Takeaways:**
-  * UX refers to layout and user flow
+  * UX refers to all aspects of the user experience, including user stories, user flow, and site layout
   * UI refers to the visual elements (typography, buttons, forms, etc.)
 
 **Why is UX important?**
@@ -41,7 +37,7 @@ As developers, we want to make web applications that are *useable* and make peop
   </head>
   ```
 
-  * You can also use this [Bootstrap Boilerplate](https://github.com/sf-wdi-19-20/modules/tree/master/1.3-HTMLandCSS/bootstrap_boilerplate) to get started
+  * You can also use this [Bootstrap boilerplate](https://github.com/sf-wdi-19-20/modules/tree/master/1.3-HTMLandCSS/bootstrap_boilerplate) to get started
 
 **Bootstrap Grid System:**
   * `.container` class holds `.row` classes
@@ -71,7 +67,7 @@ As developers, we want to make web applications that are *useable* and make peop
   * The best way to learn about the Boostrap grid system is to [see it in action](https://github.com/sf-wdi-19-20/modules/tree/master/1.3-HTMLandCSS/bootstrap_grid)
 
 ## Activities, Pt. 1
-1. Create an `index.html` file and add the [Bootstrap CDN](http://getbootstrap.com/getting-started/#download) (or fork this [Bootstrap Boilerplate](https://github.com/sf-wdi-19-20/modules/tree/master/1.3-HTMLandCSS/bootstrap_boilerplate) to get started)
+1. Create an `index.html` file and add the [Bootstrap CDN](http://getbootstrap.com/getting-started/#download) (or fork this [Bootstrap boilerplate](https://github.com/sf-wdi-19-20/modules/tree/master/1.3-HTMLandCSS/bootstrap_boilerplate) to get started)
 2. Add one `.container`, one `.row`, and three `.col-*` classes (your columns can be any widths that add up to 12)
 3. Make sure your three columns stack vertically when you are on mobile (`xs`) devices. (**Hint:** Your column class names will NOT contain `xs`)
 4. Add content to your columns (`<h1>`, `<p>`, `<img>`, etc.)
