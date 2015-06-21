@@ -80,14 +80,14 @@
 
 ## Further Reading
 
-#### Bootstrap
-  * [Bootstrap Docs](http://getbootstrap.com/css)
+#### CSS & Bootstrap
+  * [Learn CSS Layout](http://learnlayout.com)
   * [Understanding the Bootstrap Grid System](https://scotch.io/tutorials/understanding-the-bootstrap-3-grid-system)
   * [Inspiring Uses of Bootstrap](http://expo.getbootstrap.com)
-  * [Bootsnipp](http://bootsnipp.com)
 
 #### Other CSS Frameworks
-  * [Foundation](http://foundation.zurb.com/)
+  * [Foundation](http://foundation.zurb.com)
+  * [Pure.css](http://purecss.io)
 
 #### UX & UI
   * [UX is UI](https://medium.com/@mikeatherton/ux-is-ui-105460807734)
