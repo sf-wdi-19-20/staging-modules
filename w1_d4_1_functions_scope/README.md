@@ -58,7 +58,7 @@ Functions give us some pretty cool benefits:
   3. Write a function that generates a random number in a specified range.
 
   ```
-  getRand(5, 10) => any number between 5 and 10
+  getRand(5, 10) => 8 (any number between 5 and 10)
   ```
 
   4. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
