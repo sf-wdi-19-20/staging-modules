@@ -2,10 +2,9 @@
 
 | Objectives |
 | :--- |
-| Students will be able to . . . |
+| Explain the significance of calling a function |
 | Trace the flow of a program, with function calls, based on its code |
 | Create a function definition based on written specifications |
-| Explain the significance of calling a function |
 | Write anonymous and named functions |
 | Implement functions that incorporate conditionals, loops, and other function calls |
 | Explain and use closures |
@@ -45,9 +44,28 @@ Functions give us some pretty cool benefits:
 
 ## Challenges
   1. Write a `multiply` function that finds the product of two numbers.
-  2. Write a `swap` function to swap two values at two different indexes in an array.
-  3. Write a `getRand` function to generate a random number in a specified range.
-  4. Write a `randArr` function to generate an array of specified length that contains random numbers from 1 to 100.
+
+  ```
+  multiply(5, 7) => 35
+  ```
+
+  2. Write a function that swap two values at two different indexes in an array.
+
+  ```
+  swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
+  ```
+
+  3. Write a function that generates a random number in a specified range.
+
+  ```
+  getRand(5, 10) => any number between 5 and 10
+  ```
+
+  4. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
+
+  ```
+  randArr(3) => [23, 11, 82]
+  ```
 
 ## Stretch Challenges
 
