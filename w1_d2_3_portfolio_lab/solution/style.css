@@ -3,14 +3,22 @@
 body {
   font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+img {
+  max-width: 100%;
+}
+a, a:focus, a:hover {
+  color: #f2183d;
+}
+.footer {
+  padding-top: 50px;
+}
 
-/* social icons */
-/*http://bootsnipp.com/snippets/featured/spinning-social-icons*/
+/* social icons (modified code from bootsnipp) */
+/* http://bootsnipp.com/snippets/featured/spinning-social-icons */
 
 ul.social-network {
   list-style: none;
-  display: inline;
-  margin-left:0 !important;
+  margin: 20px 0;
   padding: 0;
 }
 ul.social-network li {
@@ -35,14 +43,19 @@ ul.social-network li {
 .social-network a.icoLinkedin:hover {
   background-color:#007bb7;
 }
+.social-network a.icoGithub:hover {
+  background-color: #333333;
+}
 .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i,
+.social-network a.icoGithub:hover i {
   color:#fff;
 }
 a.socialIcon:hover, .socialHoverClass {
   color:#44BCDD;
 }
 .social-circle li a {
+  background-color: #D3D3D3;
   display:inline-block;
   position:relative;
   margin:0 auto 0 auto;
@@ -77,7 +90,4 @@ a.socialIcon:hover, .socialHoverClass {
   -o-transition: all 0.8s;
   -ms-transition: all 0.8s;
   transition: all 0.8s;
-}
-a {
- background-color: #D3D3D3;   
 }
