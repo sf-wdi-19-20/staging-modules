@@ -13,15 +13,18 @@ Feel free to put in placeholder images and text for now. [placekitten](http://pl
 
 ## Wireframes
 
-## Bonus
-  1. Add one or more design elements from Bootsnipp.
-  2. Customize your portfolio by adding your own CSS styles on top of Bootstrap's defaults (you will need to link to a `style.css` in your `index.html`). A simple way to make your portfolio your own is by using a Google Font.
-
 #### Alternating Photo/Description
 
 #### Project Cards
 
 #### Case Study
+
+## Bonus
+  1. Add one or more design elements from [Bootsnipp](http://bootsnipp.com) ([social icons](http://bootsnipp.com/snippets/featured/spinning-social-icons) are always a good choice :+1:).
+  2. Customize your portfolio by overriding some of Bootstrap's defaults with your own CSS styles.
+    * **Hint:** You will need to link to a `style.css` in your `index.html` (make sure it comes after your link to the Bootstrap CDN).
+    * A simple way customize Boostrap is to use a [Google Font](https://www.google.com/fonts).
+  3. In addition to your "projects" page, create an "about" and/or "contact" page.
 
 ## Resources
 
