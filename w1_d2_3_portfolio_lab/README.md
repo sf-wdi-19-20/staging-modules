@@ -1,8 +1,8 @@
 # Portfolio Lab
 
-You're going to need a portfolio site to showcase the amazing projects you'll build in WDI. Your task is to create the "projects" page of your portfolio site using [Bootstrap](http://getbootstrap.com/css) and one of the common portfolio layouts in the **Wireframes** section below.
+  You're going to need a portfolio site to showcase the amazing projects you'll build in WDI. Your task is to create the "projects" page of your portfolio site using [Bootstrap](http://getbootstrap.com/css) and one of the common portfolio layouts in the **Wireframes** section below.
 
-Feel free to put in placeholder images and text for now. [Placeit](https://placeit.net), [placekitten](http://placekitten.com), and [Hipster Ipsum](http://hipsum.co) are great resources.
+  Feel free to put in placeholder images and text for now. [Placeit](https://placeit.net), [placekitten](http://placekitten.com), and [Hipster Ipsum](http://hipsum.co) are great resources.
 
 ## Requirements
   1. Create a new GitHub repo for your portfolio or fork the [Bootstrap boilerplate](https://github.com/sf-wdi-19-20/staging-modules/tree/master/w1_d2_2_bootstrap_css/bootstrap_boilerplate).
@@ -14,10 +14,19 @@ Feel free to put in placeholder images and text for now. [Placeit](https://place
 ## Wireframes
 
 #### Alternating Photo/Description
+  [[inspiration]](http://www.randallleung.com)
+
+  ![](wireframes/photo_description.png)
 
 #### Project Cards
+  [[inspiration]](http://www.nicolastarier.com)
+
+  ![](wireframes/project_cards.png)
 
 #### Case Study
+  The "case study" layout is meant to represent a detailed page for one project. [[inspiration]](http://haraldurthorleifsson.com/googleplus)
+
+  ![](wireframes/case_study.png)
 
 ## Bonus
   1. Add one or more design elements from [Bootsnipp](http://bootsnipp.com) ([social icons](http://bootsnipp.com/snippets/featured/spinning-social-icons) are always a good choice :+1:).
