@@ -25,10 +25,123 @@ var arr = document.querySelector(".myclass");
 
 #Challenges
 
+
+**Basic Challenges:**
+
+1. Create a Directory called 'Dom'
+  (hint:  you can do this through the terminal)
+2. Inside 'Dom', make a file called collections.html and collections.js
+3. Copy and Paste this code into the collections.html:
+
+```
+  <!doctype html>
+<html>
+  <head>
+    <title>Hello, Walter!</title>
+  </head>
+  <body>
+    <h1>DOM Collections</h1>
+    <ul>
+      <li class="datatype">Number</li>
+      <li class="datatype">Boolean</li>
+      <li class="datatype">String</li>
+      <li class="loop">for</li>
+      <li class="loop">while</li>
+      <li class="loop">for...in</li>
+      <li class="function">push()</li>
+      <li class="function">pop()</li>
+      <li class="function">shift()</li>
+    </ul>
+  </body>
+</html>
+```
+4. Open collections.html in Chrome.
+
+##Exercises
+Do these Exercises inside console in Chrome
+  (hint: Command + Option + J)
+
+###Part 1
+
+1. Use '.getElementsByTagName' to retrieve all of the '<li>' elements.
+2. Set '.style.borderBottom' on EACH of them
+3. You'll need to loop over each element to do this.
+
+###Part 2
+
+1. Use '.getElementsByClassName' to retrieve all of the elements with the class 'datatype'.
+2. Use '.style.color' and change the font color to green.
+3. You'll need to loop over each element.
+
+###Part 3
+
+1. Use '.querySelectorAll' to retrieve all of the elements with a class of 'function'.
+2. Using a loop change the color of each element to blue.
+
+##Stretch Challenges:
+
+1. Inside your DOM directory, create a new directory called 'Events'.
+2. Create 'events.css', 'events.html' and 'events.js' files inside the 'Events' directory.
+3. Copy and paste this code into 'events.html'.
+
+```
+<!doctype html>
+  <head>
+    <title>Hello, Wanda!</title>
+    <link rel="stylesheet" type="text/css" href="events.css"></link>
+  </head>
+  <body>
+    <button id="clicker">Click</button>
+
+    <div id="mouser">Mouse Over</div>
+
+    <form id="former">
+      <input type="text" name="term" placeholder="search term">
+      <input type="submit" value="Submit">
+    </form>
+
+
+    <h1>Vegetables</h1>
+    <ul id="vegetables">
+      <li>Carrots</li>
+      <li>Kale</li>
+      <li>Broccoli</li>
+      <li>Chard</li>
+    </ul>
+
+    <script type="text/javascript" src="events.js"></script>
+  </body>
+</html>
+```
+###Do these Exercises inside "events.js" and then test code in Chrome console.
+
+##Part 1
+ 1. Use '.addEventListener' to listen for the 'click' event on the '<button>'
+ 2. Pop up an 'aler()' whenever a click occurs.
+
+##Part 2
+ 1. Change the 'backgroundColor' of the box to 'yellow' when the mouse is over it.
+ 2. Change the back to 'green' when the mouse leaves the box.
+    hint: 'mouseover' and 'mouseout' events may be of use.
+
+##Part 3
+ 1. Listen for the 'submit' event on the '<form>'
+ 2. 'alert()' the text that is typed into the text field.
+
+
+##Part 4
+ **Notice that the page refreshes (see the URL bar)**
+1. Use 'event.preventDefault()' to stop the page from refreshing.
+
+##Part 5
+
+1. Listen for the 'click' event on the '<ul>' element
+2. Use 'event.target' to see which '<li>' was clicked.
+   a. 'alert()' the specific vegetable that was selected.
+  **Make sure you only use one event listener instead of adding an event
+  handler to each `<li>`**
+
+
 ### Docs & Resources
-
-### Basic Challenges
-
-### Stretch Challenges
 
 # Further Reading
