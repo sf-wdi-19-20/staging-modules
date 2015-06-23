@@ -2,15 +2,16 @@
 
   You're going to need a portfolio site to showcase the amazing projects you'll build in WDI. Your task is to create the "projects" page of your portfolio site using [Bootstrap](http://getbootstrap.com/css) and one of the common portfolio layouts in the **Wireframes** section below.
 
-  Feel free to put in placeholder images and text for now. [Placeit](https://placeit.net), [Placehold.it](http://placehold.it), and [Hipster Ipsum](http://hipsum.co) are great resources.
+  Your projects page should start with at least three projects, but most of us won't have three projects to show off yet!  Feel free to put in placeholder images and text for now. [Placeit](https://placeit.net), [Placehold.it](http://placehold.it), and [Hipster Ipsum](http://hipsum.co) are great resources for placeholder text and images.
 
-## Requirements
-  1. Create a new GitHub repo for your portfolio.
+## Requirements & Submission
+  1. Create a new repo for your portfolio.
   2. Start with an `index.html` for your portfolio's "projects" page (you can use this [Bootstrap boilerplate](https://github.com/sf-wdi-19-20/staging-modules/tree/master/w1_d2_2_bootstrap_css/bootstrap_boilerplate) to help you get started).
-  3. Choose one of the **Wireframes** below to implement with HTML, CSS, and Bootstrap.
-  4. Use the [Bootstrap grid system](http://getbootstrap.com/css/#grid) to make your page responsive.
+  3. Choose one of the **Wireframes** below to implement with HTML, CSS, and Bootstrap. 
+  4. Use the [Bootstrap grid system](http://getbootstrap.com/css/#grid) to lay out your page and make it responsive.
   5. Use at least one [Bootstrap component](http://getbootstrap.com/components) on your page (like a [nav](http://getbootstrap.com/components/#nav), [jumbotron](http://getbootstrap.com/components/#jumbotron), or [thumbnails](http://getbootstrap.com/components/#thumbnails-custom-content)).
-  6. Submit the link to your GitHub repo [here](https://docs.google.com/a/generalassemb.ly/forms/d/14rNXnDaq5X5Rvda-1BRZCl9YmkOoZzf7oxGBEZG_YJE/viewform).
+  6. Add and commit your changes, and push them up to a portfolio repo on your GitHub account.
+  7. Submit the link to your GitHub repo in the [homework submission form](https://docs.google.com/a/generalassemb.ly/forms/d/14rNXnDaq5X5Rvda-1BRZCl9YmkOoZzf7oxGBEZG_YJE/viewform).
 
 ## Wireframes
 
@@ -34,7 +35,7 @@
   2. Customize your portfolio by overriding some of Bootstrap's defaults with your own CSS styles.
     * **Hint:** You will need to link to a `style.css` in your `index.html` (make sure it comes after your link to the Bootstrap CDN).
     * A simple way customize Boostrap is to use a [Google Font](https://www.google.com/fonts).
-  3. In addition to your "projects" page, create an "about" and/or "contact" page.
+  3. In addition to your "projects" page, create an "about" and/or "contact" page, and add links to them!
 
 ## Resources
 
