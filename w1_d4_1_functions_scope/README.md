@@ -1,4 +1,4 @@
-# Functions and Scope
+# JavaScript Functions
 
 | Objectives |
 | :--- |
@@ -15,6 +15,10 @@
 
   * A **data structure** organizes information.
 
+  ```
+  "hello world", 6.287364, 76, { name: "General Assembly", streetAddress: "255 Bush Street", floor: 5 }
+  ```
+
   * An **algorithm** abstractly describes how to manipulate data to solve a problem.
 
   ```
@@ -29,28 +33,22 @@
   }
   ```
 
-#### Analogy
+#### Analogy: Dry Cleaner
   Your programs can "hand off" some of their work to functions the way you might hand off tasks to another person. When you take your laundry to a dry cleaner, the dry cleaner returns clean clothes to you a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
 
-### Why use functions?
-  * brainstorm the why
+## Why use functions?
+  > "Functions are the bread and butter of JavaScript programming.
 
-  "Functions are the bread and butter of JavaScript programming.
+  > The concept of wrapping a piece of program in a value has many uses.
 
-  The concept of wrapping a piece of program in a value has many uses.
+  > It is a tool to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other."
 
-  It is a tool to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other."
+  > -Marjin Haverbeke, *Eloquent Javascript*
 
-  -Marjin Haverbeke, *Eloquent Javascript*
+#### Benefits of Using Functions
+  * **Encapsulation** - Keeping code for the same purpose in the same place makes finding it and updating it easier.
 
-  Functions give us some pretty cool benefits:
-  * _encapsulation_ - Keeping code for the same purpose in the same place makes finding it and updating it easier.
-  * _code reuse_ - "Don't Repeat Yourself" is a principle of coding - keep it DRY!  Reusing code makes it easier to change how your program works (don't want to miss one of the 10 times you'e copied the same code block!).
-  * _recursion_ - When you call a function from within that same function, that's recursion! Recursion is a powerful algorithm design tool that closely mirrors some real-world situations.
-  * _closures_ - In JavaScript, a function "remembers" the scope where it was defined. This allows us to use the closure design pattern.
-  * _callbacks_ - In JavaScript, functions are objects that can be passed around like any other. This allows us to use the callback design pattern.
-
-  At the same time, function calls add _overhead_ that slightly decreases the efficiency of our programs, so we shouldn't put every little piece of logic in its own function. To start, if  you find yourself writing the same code 3 times in your program, consider putting that code in a function instead.
+  * **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function!
 
 ### Declaring a Function
   * explain declaring vs. expression (show in console)
@@ -78,15 +76,20 @@
   var x = 1;
 
   var changeNum = function (x) {
-    x = 2;
+      x = 2;
   }
+
   changeNum(x);
 
   console.log(x)
   // logs what?
   ```
 
+  * _closures_ - In JavaScript, a function "remembers" the scope where it was defined. This allows us to use the closure design pattern.
+
 ### Callbacks
+
+    * _callbacks_ - In JavaScript, functions are objects that can be passed around like any other. This allows us to use the callback design pattern.
 
 
 ## Challenges
