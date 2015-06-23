@@ -60,7 +60,7 @@
   }
   ```
 
-  A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition will be hoisted to the top when your code runs.
+  *A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition will be hoisted to the top when your code runs.*
 
   ```
   greet();
@@ -80,7 +80,7 @@
   }
   ```
 
-  When using a function expression, you must define the function above where you call it in your code.
+  *When using a function expression, you must define the function above where you call it in your code.*
 
   ```
   greet();
