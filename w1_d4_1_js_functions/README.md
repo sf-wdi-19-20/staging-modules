@@ -52,21 +52,47 @@
 
 ## Defining a Function
 
-  * **Function declaration:** A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means that function calls can live above function definitions in your code, since the definitions will be hoisted to the top when your code runs.
+#### Function declaration
+
   ```
   function greet() {
       console.log("Hello, there!");
   }
   ```
 
-  * **Function expression:** When using a function expression, you must define the function above where you call it in your code.
+  A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition will be hoisted to the top when your code runs.
+
+  ```
+  greet();
+
+  function greet() {
+      console.log("Hello, there!");
+  }
+
+  // prints "Hello, there!"
+  ```
+
+#### Function expression
+
   ```
   var greet = function() {
       console.log("Hello, there!");
   }
   ```
 
-It is acceptable to use either function declarations or function expressions to define your functions, but make sure to consistently stick to the same convention.
+  When using a function expression, you must define the function above where you call it in your code.
+
+  ```
+  greet();
+
+  var greet = function() {
+      console.log("Hello, there!");
+  }
+
+  // Uncaught ReferenceError: greet is not defined
+  ```
+  ---
+  It is acceptable to use either function declarations or function expressions to define your functions, but make sure to consistently stick to the same convention.
 
 ### Componenets of a Function
   * diagram a function on the whiteboard
@@ -103,7 +129,7 @@ It is acceptable to use either function declarations or function expressions to 
 
 ### Callbacks
 
-    * _callbacks_ - In JavaScript, functions are objects that can be passed around like any other. This allows us to use the callback design pattern.
+  * _callbacks_ - In JavaScript, functions are objects that can be passed around like any other. This allows us to use the callback design pattern.
 
 
 ## Challenges
