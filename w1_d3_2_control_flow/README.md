@@ -1,7 +1,7 @@
-
 ##Objectives  
 | Objectives |
 | :--- |
+| Describe and use boolean logic |
 | Trace the flow of a program based on its code |
 | Predict the output from `if/else` and `switch` statements |
 | explain the differences between `for` loops and `while` loops, and when to use each |
@@ -13,36 +13,73 @@ Conditionals and loops are fundamental to all programming in every language and 
 
 ### Analogy (What?)
 
-Choose your own adventure
+Condtionals are like a **choose your own adventure book**
 
-![choose](http://www.liketotally80s.com/wp-content/uploads/2014/03/choose-your-own-adventure.jpg)
+Loops are like a **room of people introducing themselves**.
 
 ### Examples/Demo (How?)
 
-if/else
+#### Basic Boolean Operators
+
+| English | "and" | "or" | "not" or "bang" | "double bang" |
+| ------------- |:-------------|:-------------|:-------------| :------- |
+| Javascript | `&&` | &#124;&#124; | `!` | `!!` | |  
+| e.g. | `a && b` | a  &#124;&#124; b | `!b` | `!!b` |
+| English | A and B | A or B | not B | not NOT B |
+
+#### Boolean Comparison Operators
+
+| strict equality | loose equality | not strictly equal | not loosely equal | greater than | less than | greater than or equal to | less than or equal to |
+| ------------- |:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|
+| `===` | `==` | `!==` | `!=` | `>` | `<` | `>=` | `<=` |
+
+#### `if/else`
+
 ```
-var a = true
-if (a) {
-  console.log("awesome!")
-} else {
-  console.log("a is not true :(")
+if (badWeather) {
+  takeTheBus();
+}
+
+if (!badWeather) {
+  walkToWork();
 }
 ```
 
-for
+```
+if (badWeather) {
+  takeTheBus();
+} else {
+  walkToWork();
+}
+```
+
+#### `else if`
+
+```
+if ( hasCar ) {
+	// drive it!
+} else if ( hasBike ) {
+	// ride it!
+} else if ( hasTransitPass ) {
+	// take the bus!
+} else {
+	// better start walking!
+}
+```
+
+#### `while/for` loops
+
 ```
 var m = ["Bill", "Nicki", "Kelly"]
-for (i = 0; i < cars.length; i++) {
+for (i = 0; i < m.length; i++) {
   console.log(m[i] + " is a nice person")
 }
 
 ```
 
-while
 ```
-while (i < 10) {
-    console.log("The number is " + i);
-    i++;
+while (timeBeforeWork > 180000) { // Remember JS counts time in milliseconds
+  hitSnooze()
 }
 ```
 
@@ -58,10 +95,80 @@ while (i < 10) {
 </br>
 
 ### Basic Challenges
-1. In a snippet inside of developer tools create a variable that is an array of 5 strings. Loop over the array and log it to the console if its length is 4 or longer.
-2. Create an array of 3 hashes with 2 key:value pairs: name and age. Write a conditional for loop that logs to the console only the name of the oldest person.
+1. Which of the following are truthy values? (hint: try `if("abc"){"console.log('I'm truthy!')"}` in the JS console)
+  * 1
+  * "abc"
+  * ""
+  * []
+  * {}
+  * -1
+  * (1+1)
+  * 0
+  * 3.14159
+  * Object
+
+2. Log to the console "This is awesome!" 25 times.
+3. Create a snippet inside of developer tools. Create snippets to do the rest of the challenges.
+4. In your snippet, create a new variable that is an array of 4 phrases: `Howdy there`, ` ` , `javascript`, and `Pair Programming`.
+5. Loop over the array and console log each phrase.
+6. Loop over the array and log each phrase to the console if its total length is 4 or longer. Otherwise, console log that the phrase is too short.
+
+6. Come up with three different ways to break a `for` loop that result in three different errors. What three different errors did you get?
+
+
+1. Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
+
+For starters, it costs 5 tokens. Here's how we might code that:
+
+```
+var tokens = 3; // Jimmy's tokens
+
+// Can he ride?
+if ( tokens >= 5 ) {
+    console.log("Step right up!");
+} else {
+    console.log("Sorry, you can't ride")
+}
+```
+Edit the code above to check the following additional Requirements:
+
+    Must be at least 4ft tall
+    Must be at least 12 years old
+    Replace the prevoius rule: now riders under 12 must be accompanied by an adult
+    (If the boss isn't looking, you can sneak in!)
+    Riders with a park pass get in free.
+
 
 ### Stretch Challenges
+
+5. In a snippet, create a new variable that is an array containing 5 objects, each of which has the keys `name` and `age`. You can make up the names and ages for your objects.
+6. Log to the console the name value of each object.
+7. Create and log an array with the age of each object in months (assume the original ages were in years).
+9. Find and log the sum of the ages.
+8. Log to the console only the name of the oldest person.
+9. Log to the console the index of each element in the array.
+10. Create and log an array containing only the objects with an age over 20.
+11. Create and log an array of all the names, in which any names that begin with a consonant are upper case.
+12. Create and log an array that is the original array in a random order.
+
+### Homework
+
+2. Write code that console logs the "Bottles of beer on the wall" song:
+
+		5 bottles of beer on the wall,
+		5 bottles of beer!
+		Take one down and pass it around,
+		4 bottles of beer on the wall
+  * How would you fix "1 bottles of beer"?
+  * How would you change "0" to "No more"?
+  * Use a prompt to ask the user how many verses they want to hear 
+
+3. Write a code snippet to prompt a user for an email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share?
+
+4. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change.
+
+
+
 
 ### External Reading and Tutorials
 
