@@ -43,6 +43,7 @@ Functions give us some pretty cool benefits:
   To keep track of the functions JS has on hold, it uses a _call stack_. Remember the stack data structure? As JS calls a new function, it pushes the function onto the call stack. When a function returns, it pops that function off of the call stack. The control flow stays with the top function on the call stack.
 
 ## Challenges
+
   1. Write a `multiply` function that finds the product of two numbers.
 
   ```
@@ -78,3 +79,6 @@ Functions give us some pretty cool benefits:
   4. Work through more functions problems [here](more_functions.md).
 
 ## Further Reading
+  * [Functions - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+  * [Functions - Eloquent JavaScript](http://eloquentjavascript.net/03_functions.html)
+  * [Demystifying JavaScript Variable Scope and Hoisting](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting)
