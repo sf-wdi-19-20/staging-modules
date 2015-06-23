@@ -25,12 +25,16 @@ var arr = document.querySelector(".myclass");
 
 #Challenges
 
+### Docs & Resources
 
-**Basic Challenges:**
+[Document object docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
+[document Object docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
 
-1. Create a Directory called 'Dom'
-  (hint:  you can do this through the terminal)
-2. Inside 'Dom', make a file called collections.html and collections.js
+
+###Basic Challenges:
+
+1. Create a directory called 'vanilla-dom'
+2. Inside 'vanilla-dom', make a file called `index.html` and `scripts.js`
 3. Copy and Paste this code into the collections.html:
 
 ```
@@ -40,7 +44,7 @@ var arr = document.querySelector(".myclass");
     <title>Hello, Walter!</title>
   </head>
   <body>
-    <h1>DOM Collections</h1>
+    <h1 id="title">DOM Collections</h1>
     <ul>
       <li class="datatype">Number</li>
       <li class="datatype">Boolean</li>
@@ -55,7 +59,7 @@ var arr = document.querySelector(".myclass");
   </body>
 </html>
 ```
-4. Open collections.html in Chrome.
+4. Open `index.html` in Chrome.
 
 ##Exercises
 Do these Exercises inside console in Chrome
@@ -140,8 +144,5 @@ Do these Exercises inside console in Chrome
    a. 'alert()' the specific vegetable that was selected.
   **Make sure you only use one event listener instead of adding an event
   handler to each `<li>`**
-
-
-### Docs & Resources
 
 # Further Reading
