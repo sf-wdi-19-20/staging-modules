@@ -49,7 +49,7 @@ Functions give us some pretty cool benefits:
   multiply(5, 7) => 35
   ```
 
-  2. Write a function that swap two values at two different indexes in an array.
+  2. Write a function that swaps two values at two different indexes in an array.
 
   ```
   swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
@@ -69,9 +69,12 @@ Functions give us some pretty cool benefits:
 
 ## Stretch Challenges
 
-  1. Write a `getMax` function to find the maximum number in an array.
-  2. Write a function called `describeMather` that takes in three arguments: two numbers and a function called `mather`. The explain function should pass the two numbers into `mather` and write out a message in the console to show the two number inputs and the output from `mather`. Test `describeMather` by passing in your `multiply` function.
-  3. Write a `vowels` function that counts the number of vowels in a given string.
-  4. Write a `letterCount` function that counts the number of times each letter occurs in a given string. It should return an object containing the count for each letter.
+  1. Write a `getMax` function that finds the maximum number in an array.
+
+  2. Write a `vowels` function that counts the number of vowels in a given string.
+
+  3. Write a function called `explainMather` that takes in three arguments: two numbers and a function called `mather`. The `explainMather` function should pass the two numbers into `mather` and write out a message in the console to show the two number inputs and the output from `mather`. Test `explainMather` by passing in your `multiply` function from challenge #1.
+
+  4. Work through more functions problems [here](more_functions.md).
 
 ## Further Reading
