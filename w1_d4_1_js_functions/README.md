@@ -50,9 +50,23 @@
 
   * **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function!
 
-### Declaring a Function
-  * explain declaring vs. expression (show in console)
-  * hoisting (show in console)
+## Defining a Function
+
+  * **Function declaration:** A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means that function calls can live above function definitions in your code, since the definitions will be hoisted to the top when your code runs.
+  ```
+  function greet() {
+      console.log("Hello, there!");
+  }
+  ```
+
+  * **Function expression:** When using a function expression, you must define the function above where you call it in your code.
+  ```
+  var greet = function() {
+      console.log("Hello, there!");
+  }
+  ```
+
+It is acceptable to use either function declarations or function expressions to define your functions, but make sure to consistently stick to the same convention.
 
 ### Componenets of a Function
   * diagram a function on the whiteboard
