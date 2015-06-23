@@ -151,25 +151,6 @@ Edit the code above to check the following additional Requirements:
 11. Create and log an array of all the names, in which any names that begin with a consonant are upper case.
 12. Create and log an array that is the original array in a random order.
 
-### Homework
-
-2. Write code that console logs the "Bottles of beer on the wall" song:
-
-		5 bottles of beer on the wall,
-		5 bottles of beer!
-		Take one down and pass it around,
-		4 bottles of beer on the wall
-  * How would you fix "1 bottles of beer"?
-  * How would you change "0" to "No more"?
-  * Use a prompt to ask the user how many verses they want to hear 
-
-3. Write a code snippet to prompt a user for an email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share?
-
-4. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change.
-
-
-
-
 ### External Reading and Tutorials
 
 [Javascripting](https://github.com/sethvincent/javascripting)
