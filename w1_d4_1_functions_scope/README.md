@@ -10,9 +10,27 @@
 | Explain and use closures |
 | Write recursive functions and functions that take other functions as arguments |
 
-### What are functions?
-  * definition and analogy
-  * Your programs can "hand off" some of their work to functions the way we might hand off tasks to another person. If you take your laundry to a dry cleaner, you can just get clean clothes a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
+## What are functions?
+  * Computer science can essentially be divided into two core elements: **data structures** and **algorithms**.
+
+  * A **data structure** organizes information.
+
+  * An **algorithm** abstractly describes how to manipulate data to solve a problem.
+
+  ```
+  Take a number, multiply it by itself, and return the product.
+  ```
+
+  * A [**function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) is a concrete implementation of an algorithm in a computer language. *It is a "subprogram" that encapsulates a specific behavior.*
+
+  ```
+  var square = function(num) {
+        return num * num;
+  }
+  ```
+
+#### Analogy
+  Your programs can "hand off" some of their work to functions the way you might hand off tasks to another person. When you take your laundry to a dry cleaner, the dry cleaner returns clean clothes to you a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
 
 ### Why use functions?
   * brainstorm the why
