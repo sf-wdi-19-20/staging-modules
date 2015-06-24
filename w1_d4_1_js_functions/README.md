@@ -142,12 +142,18 @@ To keep track of the functions JS has on hold, it uses a **call stack**. As JS c
 
 * Some computer science languages refer to functions as methods. The same call-stack structure shown in the diagram applies to JavaScript functions.
 
-### Scope
+## Scope
+
+Scope represents the area of your program where a variable is defined. JavaScript has two scopes: **global scope** and **local scope**.
+
+You can think of scope as a rule: *a new function introduces a new scope.*
 
 ```
+// global scope
 var x = 1;
 
 var changeNum = function (x) {
+  // local scope
   x = 2;
 }
 
@@ -157,38 +163,49 @@ console.log(x)
 // logs what?
 ```
 
-* _closures_ - In JavaScript, a function "remembers" the scope where it was defined. This allows us to use the closure design pattern.
+## Callbacks
 
-### Callbacks
+A **callback** is a function that is passed into another function. A function that can take a callback is known as a **first-class function**.
 
-* _callbacks_ - In JavaScript, functions are objects that can be passed around like any other. This allows us to use the callback design pattern.
+```
+var consoleMe = function(message) {
+  console.log("I'm the callback, now displaying message...");
+  console.log(message);
+}
 
+var firstClassFunction = function(message, callback) {
+  console.log("I'm the first class function, now calling the callback...");
+  callback(message);
+}
+
+firstClassFunction("Functions are fun!", consoleMe);
+```
 
 ## Challenges
 
 1. Write a `multiply` function that finds the product of two numbers.
 
-```
-multiply(5, 7) => 35
-```
+  ```
+  multiply(5, 7) => 35
+  ```
 
 2. Write a function that swaps two values at two different indexes in an array.
 
-```
-swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
-```
+  ```
+  swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
+  ```
 
 3. Write a function that generates a random number in a specified range (**Hint:** Look up Math.random()).
 
-```
-getRand(5, 10) => 8 (any number between 5 and 10)
-```
+  ```
+  getRand(5, 10) => 8 (any number between 5 and 10)
+  ```
 
 4. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
 
-```
-randArr(3) => [23, 11, 82]
-```
+  ```
+  randArr(3) => [23, 11, 82]
+  ```
 
 ## Stretch Challenges
 
