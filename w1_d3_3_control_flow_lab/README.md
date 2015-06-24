@@ -27,9 +27,12 @@
 
 3. Write a code snippet to prompt a user for their email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share?
 
-4. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alerts.
+4. Create a `userLogin` object with one key for a user's name and a key for the user's password. Make up a user name and password.  Write a code snippet to prompt the user for their password with a message customized to the user. For example, if the user name you created is `octocat_rules`, the message should be `"Enter password for user octocat_rules."`
 
-5. Create 
+5. Extend your previous snippet to check whether the password matches the password in the `userLogin` object. The snippet should communicate whether the passwords matched to the user with console logs or alerts.
+
+Bonus: Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alerts.
+
 
 ###Exercise 3: Security Questions
 
