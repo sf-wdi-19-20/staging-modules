@@ -27,8 +27,8 @@ var arr = document.querySelector(".myclass");
 
 ### Docs & Resources
 
-[Document object docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
-[document Object docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
+* [Document object docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
+* [document Object docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
 
 
 ###Basic Challenges:
@@ -65,24 +65,24 @@ var arr = document.querySelector(".myclass");
 Do these Exercises inside console in Chrome
   (hint: Command + Option + J)
 
-###Part 1
+#####Part 1
 
-1. Use '.getElementsByTagName' to retrieve all of the '<li>' elements.
+1. Select all of the list elements (`<li>`). 
 2. Set '.style.borderBottom' on EACH of them
 3. You'll need to loop over each element to do this.
 
-###Part 2
+#####Part 2
 
-1. Use '.getElementsByClassName' to retrieve all of the elements with the class 'datatype'.
+1. Retrieve all the elements with the class `datatype`.
 2. Use '.style.color' and change the font color to green.
 3. You'll need to loop over each element.
 
-###Part 3
+#####Part 3
 
 1. Use '.querySelectorAll' to retrieve all of the elements with a class of 'function'.
 2. Using a loop change the color of each element to blue.
 
-##Stretch Challenges:
+###Stretch Challenges:
 
 1. Inside your DOM directory, create a new directory called 'Events'.
 2. Create 'events.css', 'events.html' and 'events.js' files inside the 'Events' directory.
