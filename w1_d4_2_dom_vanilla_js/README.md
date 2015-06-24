@@ -18,17 +18,44 @@ Vanilla JS underlies all Javascript frameworks. Understanding basic JS is an imp
 
 ### Demo (How?)
 
+Get DOM element by selector
 ```
-var el = document.querySelector("#myId");
-var arr = document.querySelector(".myclass");
+var h1Elements = document.querySelector("h1")
+var myId = document.querySelector("#myId")
+var primaryButtons = document.querySelector("btn-primary")
 ```
+
+####Or
+
+Get DOM element by id
+```
+var el = document.getElementById("#myId");
+```
+
+Get DOM elements by class
+```
+var arr = document.getElementsByClassName(".myclass");
+```
+
+Get DOM elements by HTML tag
+```
+var el = document.getElementsByTagName(".myclass");
+```
+
+Add a function
+```
+el.addEventListener("click", function() {
+  alert("you clicked a button");
+});
+```
+
 
 #Challenges
 
 ### Docs & Resources
 
-* [Document object docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
-* [document Object docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
+* [Document Object Model docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
+* [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
 
 
 ###Basic Challenges:
