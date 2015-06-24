@@ -54,4 +54,4 @@ Try using [regular expressions](https://developer.mozilla.org/en-US/docs/Web/Jav
 
 1. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alerts.
 
-2: Write a code snippet to prompt a user for their email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share? 
+2. Write a code snippet to prompt a user for their email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share? 
