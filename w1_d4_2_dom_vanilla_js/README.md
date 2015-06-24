@@ -137,15 +137,15 @@ Do these Exercises inside console in Chrome
 
 ###Stretch Challenges:
 
-1. Inside your DOM directory, create a new directory called 'Events'.
-2. Create 'events.css', 'events.html' and 'events.js' files inside the 'Events' directory.
-3. Copy and paste this code into 'events.html'.
+1. Inside your `vanilla-dom` directory, create a new directory called `events`.
+2. Create `style.css`, `index.html` and `app.js` files inside the `events` directory.
+3. Copy and paste this code into `index.html`
 
 ```
 <!doctype html>
   <head>
     <title>Hello, Wanda!</title>
-    <link rel="stylesheet" type="text/css" href="events.css"></link>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
   </head>
   <body>
     <button id="clicker">Click</button>
@@ -166,34 +166,34 @@ Do these Exercises inside console in Chrome
       <li>Chard</li>
     </ul>
 
-    <script type="text/javascript" src="events.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
 ```
 ###Do these Exercises inside "events.js" and then test code in Chrome console.
 
 ####Part 1
- 1. Use '.addEventListener' to listen for the 'click' event on the '<button>'
- 2. Pop up an 'aler()' whenever a click occurs.
+ 1. Use `.addEventListener`t to listen for the 'click' event on the `<button>`.
+ 2. Pop up an `alert()` whenever a click occurs.
 
 ####Part 2
- 1. Change the 'backgroundColor' of the box to 'yellow' when the mouse is over it.
- 2. Change the back to 'green' when the mouse leaves the box.
-    hint: 'mouseover' and 'mouseout' events may be of use.
+ 1. Change the `backgroundColor` of the box to 'yellow' when the mouse is over it.
+ 2. Change the back to 'green' when the mouse leaves the box.<br>
+    (hint: 'mouseover' and 'mouseout' events may be of use.)
 
 ####Part 3
- 1. Listen for the 'submit' event on the '<form>'
- 2. 'alert()' the text that is typed into the text field.
+ 1. Listen for the 'submit' event on the `<form>`
+ 2. `alert()` the text that is typed into the text field.
 
 
 ####Part 4
  **Notice that the page refreshes (see the URL bar)**
-1. Use 'event.preventDefault()' to stop the page from refreshing.
+1. Use `event.preventDefault()` to stop the page from refreshing.
 
 ####Part 5
 
-1. Listen for the 'click' event on the '<ul>' element
-2. Use 'event.target' to see which '<li>' was clicked.
+1. Listen for the 'click' event on the `<ul>` element
+2. Use `event.target` to see which `<li>` was clicked.
    a. 'alert()' the specific vegetable that was selected.
   **Make sure you only use one event listener instead of adding an event
   handler to each `<li>`**
