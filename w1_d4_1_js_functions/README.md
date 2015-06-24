@@ -2,13 +2,10 @@
 
 | Objectives |
 | :--- |
-| Explain the significance of calling a function |
-| Trace the flow of a program, with function calls, based on its code |
+| Explain what a function is and why we should use functions |
 | Create a function definition based on written specifications |
-| Write anonymous and named functions |
 | Implement functions that incorporate conditionals, loops, and other function calls |
-| Explain and use closures |
-| Write recursive functions and functions that take other functions as arguments |
+| Identify the scope where a variable is defined |
 
 ## What are functions?
 
@@ -189,19 +186,25 @@ firstClassFunction("Functions are fun!", consoleMe);
   multiply(5, 7) => 35
   ```
 
-2. Write a function that swaps two values at two different indexes in an array.
+2. Write a function that takes in a number and returns `true` if the number is even and `false` if the number is odd.
+
+  ```
+  isEven(4) => true
+  ```
+
+3. Write a function that swaps two values at two different indexes in an array.
 
   ```
   swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
   ```
 
-3. Write a function that generates a random number in a specified range (**Hint:** Look up Math.random()).
+4. Write a function that generates a random number in a specified range (**Hint:** Look up Math.random()).
 
   ```
   getRand(5, 10) => 8 (any number between 5 and 10)
   ```
 
-4. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
+5. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
 
   ```
   randArr(3) => [23, 11, 82]
