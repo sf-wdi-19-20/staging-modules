@@ -11,21 +11,15 @@
 | Write recursive functions and functions that take other functions as arguments |
 
 ## What are functions?
-  * Computer science can essentially be divided into two core elements: **data structures** and **algorithms**.
+  A [**function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) is a concrete implementation of an algorithm in a computer language. *It is a "subprogram" that encapsulates a specific behavior.*
 
-  * A **data structure** organizes information.
-
-  ```
-  "hello world", 6.287364, 76, { name: "General Assembly", streetAddress: "255 Bush Street", floor: 5 }
-  ```
-
-  * An **algorithm** abstractly describes how to manipulate data to solve a problem.
+  **Algorithm (abstract):**
 
   ```
   Take a number, multiply it by itself, and return the product.
   ```
 
-  * A [**function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) is a concrete implementation of an algorithm in a computer language. *It is a "subprogram" that encapsulates a specific behavior.*
+  **Function (concrete):**
 
   ```
   var square = function(num) {
@@ -35,6 +29,13 @@
 
 #### Analogy: Dry Cleaner
   Your programs can "hand off" some of their work to functions the way you might hand off tasks to another person. When you take your laundry to a dry cleaner, the dry cleaner returns clean clothes to you a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
+
+  ```
+  var dryClean = function(dirtyClothes) {
+    // code that turns dirtyClothes into cleanClothes
+    return cleanClothes;
+  }
+  ```
 
 ## Why use functions?
   > "Functions are the bread and butter of JavaScript programming.
@@ -60,7 +61,7 @@
   }
   ```
 
-  *A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition will be hoisted to the top when your code runs.*
+  *A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition moves to the top when your code runs.*
 
   ```
   greet();
@@ -94,21 +95,47 @@
   ---
   It is acceptable to use either function declarations or function expressions to define your functions, but make sure to consistently stick to the same convention.
 
-### Componenets of a Function
-  * diagram a function on the whiteboard
+## Components of a Function
+  The **parameters** are what you declare as being passed into the function in its definition.
 
-  Function descriptions may take you back to high school math, but you can always start to approach them by parsing out the function's arguments and what it should return.
+  ```
+  var iHaveParameters = function(firstParam,  secondParam, thirdParam) {
+    // do something with the parameters
+  }
+  ```
 
-  * takes, takes in, expects -> arguments
-  * gives back, returns, sends back -> return instructions
-  * everything else probably says what the function should do, or what its name should be
+  The **arguments** are what is actually passed into the function when called.
 
-  Why do we say the function "takes" and "returns"? This language exactly mirrors how control flow works with functions! You can imagine JavaScript control flow as a person talking on the phone with your program. When you write a function call, it's like JS puts the main program on hold and contacts the function. If another function is called, JS puts the first function on hold to contact the new one. When the function finishes, JS returns to the previous call.
+  ```
+  iHaveParameters("one", 2, 3.33);
+  ```
 
-  To keep track of the functions JS has on hold, it uses a _call stack_. Remember the stack data structure? As JS calls a new function, it pushes the function onto the call stack. When a function returns, it pops that function off of the call stack. The control flow stays with the top function on the call stack.
+  The **return statement** is what the function outputs. Only one value returns from a function, and any code after the return statement won't run.
 
-  * show returning vs. printing in console
-  * Stop here for challenges 1-2
+  ```
+  var functionThatReturns = function() {
+    return true; // returns true
+    var sum = 2 + 2; // doesn't run
+  }
+  ```
+
+  The **function body** is everything inside the actual function.
+
+  ```
+  var whatsInside = function() {
+    var sum = 2 + 2; // end function body
+    console.log(sum);
+    return sum; // end function body
+  }
+  ```
+  ---
+  We say that a function **takes in arguments** and **returns** something to us. You can imagine JavaScript control flow as a person talking on the phone with your program. When you call a function, it's like JS puts the main program on hold and contacts the function. If another function is called, JS puts the first function on hold to contact the new one. When the function finishes, JS returns to the previous call.
+
+  To keep track of the functions JS has on hold, it uses a **call stack**. As JS calls a new function, it pushes the function onto the call stack. When a function returns, it pops that function off of the call stack.
+
+  ![](http://i.stack.imgur.com/4Z6xK.png)
+
+  * As shown in the diagram, some computer science languages refer to functions as methods.
 
 ### Scope
 
@@ -146,7 +173,7 @@
   swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
   ```
 
-  3. Write a function that generates a random number in a specified range.
+  3. Write a function that generates a random number in a specified range (**Hint:** Look up Math.random()).
 
   ```
   getRand(5, 10) => 8 (any number between 5 and 10)
@@ -166,7 +193,7 @@
 
   3. Write a `vowels` function that counts the number of vowels in a given string.
 
-  4. Work through more functions problems [here](more_functions.md).
+  4. Work through the [functions problem set](functions_problem_set.md).
 
 ## Further Reading
   * [Functions - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
