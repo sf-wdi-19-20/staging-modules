@@ -186,7 +186,7 @@ firstClassFunction("Functions are fun!", consoleMe);
   multiply(5, 7) => 35
   ```
 
-2. Write a function that takes in a number and returns `true` if the number is even and `false` if the number is odd.
+2. Write a function that takes in a number and returns `true` if the number is even and `false` if the number is odd (**Hint:** Look up the `%` operator).
 
   ```
   isEven(4) => true
