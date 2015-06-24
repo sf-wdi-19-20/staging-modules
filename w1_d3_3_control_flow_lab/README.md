@@ -7,7 +7,7 @@
 1. Test each snippet individually using at least 2 different inputs.
 1. Copy your snippets into individual files in your repo. Try making a commit for each one you complete.
 1. Push your work to a repo on your GitHub account.
-1. Submit the link to your github repo in the [homework submission form]().
+1. Submit the link to your github repo in the [homework submission form](https://docs.google.com/a/generalassemb.ly/forms/d/14rNXnDaq5X5Rvda-1BRZCl9YmkOoZzf7oxGBEZG_YJE/viewform).
 
 ###Exercise 1: Sing!
 
@@ -27,12 +27,19 @@
 
 3. Write a code snippet to prompt a user for their email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share?
 
-4. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alert.
+4. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alerts.
+
+5. Create 
 
 ###Exercise 3: Security Questions
 
 1. Create an array called `securityQuestions`. Each element of `securityQuestion` will be an object with two keys: `question` and `expected_answer`. 
-1. Populate (fill) `securityQuestions` with at least three such objects. Feel free to just make them up.
+1. Populate (fill) `securityQuestions` with at least three such objects. Feel free to just make them up. For example, one security question object might be:     
+	```
+	{ question: "What was your first pet's name?", expected_answer: "FlufferNutter" }
+	```
+
+
 1. Write code that goes through each of the security questions doing the following:
   -- prompt the user with the question
   -- check whether the user's input matches the expected answer
