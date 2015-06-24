@@ -104,7 +104,7 @@ It is acceptable to use either function declarations or function expressions to 
 The **parameters** are what you declare as being passed into the function in its definition.
 
 ```
-var iHaveParameters = function(firstParam,  secondParam, thirdParam) {
+var iHaveParameters = function(firstParam, secondParam, thirdParam) {
   // do something with the parameters
 }
 ```
@@ -128,7 +128,7 @@ The **function body** is everything inside the actual function.
 
 ```
 var whatsInside = function() {
-  var sum = 2 + 2; // end function body
+  var sum = 2 + 2; // start function body
   console.log(sum);
   return sum; // end function body
 }
