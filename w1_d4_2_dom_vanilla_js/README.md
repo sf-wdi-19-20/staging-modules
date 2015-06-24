@@ -18,6 +18,8 @@ Vanilla JS underlies all Javascript frameworks. Understanding basic JS is an imp
 
 ### Demo (How?)
 
+#### Select Elements
+
 Get DOM element by selector
 ```
 var h1Elements = document.querySelector("h1")
@@ -25,7 +27,7 @@ var myId = document.querySelector("#myId")
 var primaryButtons = document.querySelector("btn-primary")
 ```
 
-####Or
+#####Or
 
 Get DOM element by id
 ```
@@ -42,11 +44,37 @@ Get DOM elements by HTML tag
 var el = document.getElementsByTagName(".myclass");
 ```
 
+#### Add Dynamic Changes to Events with Functions
 Add a function
 ```
 el.addEventListener("click", function() {
   alert("you clicked a button");
 });
+```
+
+Change or add a style attribute value
+```JS
+el.style.color = "red"
+el.style.display= "none" // hide the element
+```
+
+Change text
+```
+el.innerText = "New Text!"
+```
+
+Add class
+```
+el.classList.add("danger")
+```
+
+Prevent Default Behavior
+```
+var button = document.querySelector("a#san-francisco_cta");
+button.onclick = function(event){
+    event.preventDefault(); // SUPER IMPORTANT PART
+    alert("Hahah! Now you get me instead")
+};
 ```
 
 
@@ -56,7 +84,7 @@ el.addEventListener("click", function() {
 
 * [Document Object Model docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
 * [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
-
+* [List of DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
 ###Basic Challenges:
 
@@ -86,16 +114,14 @@ el.addEventListener("click", function() {
   </body>
 </html>
 ```
-4. Open `index.html` in Chrome.
 
-##Exercises
 Do these Exercises inside console in Chrome
   (hint: Command + Option + J)
 
 #####Part 1
 
 1. Select all of the list elements (`<li>`).
-2. Set '.style.borderBottom' on EACH of them
+2. Loop over them to add a border to the bottom of each.
 3. You'll need to loop over each element to do this.
 
 #####Part 2
