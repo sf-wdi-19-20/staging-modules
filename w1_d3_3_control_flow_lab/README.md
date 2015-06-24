@@ -18,7 +18,7 @@ Hint: Be mindful of infinite loops. They will crash your browser, and you'll los
 		5 bottles of beer on the wall,
 		5 bottles of beer!
 		Take one down and pass it around,
-		4 bottles of beer on the wall
+		4 bottles of beer on the wall!
 
 
   * How would you fix "1 bottles of beer"?
