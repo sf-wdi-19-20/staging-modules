@@ -24,7 +24,7 @@ Take a number, multiply it by itself, and return the product.
 
 ```
 var square = function(num) {
-    return num * num;
+  return num * num;
 }
 ```
 
@@ -61,7 +61,7 @@ var dryClean = function(dirtyClothes) {
 
 ```
 function greet() {
-    console.log("Hello, there!");
+  console.log("Hello, there!");
 }
 ```
 
@@ -71,7 +71,7 @@ function greet() {
 greet();
 
 function greet() {
-    console.log("Hello, there!");
+  console.log("Hello, there!");
 }
 
 // prints "Hello, there!"
@@ -81,7 +81,7 @@ function greet() {
 
 ```
 var greet = function() {
-    console.log("Hello, there!");
+  console.log("Hello, there!");
 }
 ```
 
@@ -91,7 +91,7 @@ var greet = function() {
 greet();
 
 var greet = function() {
-    console.log("Hello, there!");
+  console.log("Hello, there!");
 }
 
 // Uncaught ReferenceError: greet is not defined
@@ -148,7 +148,7 @@ To keep track of the functions JS has on hold, it uses a **call stack**. As JS c
 var x = 1;
 
 var changeNum = function (x) {
-    x = 2;
+  x = 2;
 }
 
 changeNum(x);
