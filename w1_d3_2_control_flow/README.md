@@ -13,7 +13,7 @@ Conditionals and loops are fundamental to all programming in every language and 
 
 ### Analogy (What?)
 
-Condtionals are like a **choose your own adventure book**
+Conditionals are like a **choose your own adventure book**
 
 Loops are like a **room of people introducing themselves**.
 
@@ -113,7 +113,7 @@ while (timeBeforeWork > 180000) { // Remember JS counts time in milliseconds
 5. Loop over the array and console log each phrase.
 6. Loop over the array and log each phrase to the console if its total length is 4 or longer. Otherwise, console log that the phrase is too short.
 
-6. Come up with three different ways to break a `for` loop that result in three different errors. What three different errors did you get?
+7. Come up with three different ways to break a `for` loop that result in three different errors. What three different errors did you get?
 
 
 1. Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
