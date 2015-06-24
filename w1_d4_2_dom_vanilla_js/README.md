@@ -18,6 +18,24 @@ Vanilla JS underlies all Javascript frameworks. Understanding basic JS is an imp
 
 ### Demo (How?)
 
+#### Include JavaScript files in your project 
+
+```HTML
+<html>
+<head>
+  <title>Funky Blog</title>
+  <!-- LOCAL SCRIPTS -->
+  <script src="scripts/funky-script.js"></script>
+
+  <!-- REMOTE SCRIPT (FROM CONTENT DELIVERY NETWOR(CDN)) -->
+  <script></script>
+</head>
+<body>
+  <!-- STUFFS -->
+</body>
+</html>
+```
+
 #### Select Elements
 
 Get DOM element by selector
@@ -27,7 +45,7 @@ var myId = document.querySelector("#myId")
 var primaryButtons = document.querySelector("btn-primary")
 ```
 
-#####Or
+###### Or
 
 Get DOM element by id
 ```
@@ -77,7 +95,6 @@ button.onclick = function(event){
 };
 ```
 
-
 #Challenges
 
 ### Docs & Resources
@@ -86,7 +103,7 @@ button.onclick = function(event){
 * [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
 * [List of DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-###Basic Challenges:
+### Basic Challenges:
 
 1. Create a directory called 'vanilla-dom'
 2. Inside 'vanilla-dom', make a file called `index.html` and `scripts.js`
