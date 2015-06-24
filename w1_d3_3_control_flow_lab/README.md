@@ -11,7 +11,7 @@
 
 ###Exercise 1: Sing!
 
-Hint: Be mindful of infinite loops. They will crash your browser!
+Hint: Be mindful of infinite loops. They will crash your browser, and you'll lose your snippets! When you're working with a loop that might not end, keep a copy of your code in Sublime Text, too.
 
 2. Write code that console logs the "Bottles of beer on the wall" song:
 
@@ -29,24 +29,26 @@ Hint: Be mindful of infinite loops. They will crash your browser!
 
 3. Write a code snippet to prompt a user for their email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share?
 
-4. Create a `userLogin` object with one key for a user's name and a key for the user's password. Make up a user name and password.  Write a code snippet to prompt the user for their password with a message customized to the user. For example, if the user name you created is `octocat_rules`, the message should be `"Enter password for user octocat_rules."`
+4. Create a `userLogin` object with one key for a user's name and one key for the user's password. Just make up a user name and password.  Write a code snippet that prompts the user for their password with a message customized to the user. For example, if the user name you created is `octocat_rules`, the message should be `"Enter password for user octocat_rules."`
 
-5. Extend your previous snippet to check whether the password matches the password in the `userLogin` object. The snippet should communicate whether the passwords matched to the user with console logs or JavaScript `alert`.
+5. Extend your previous snippet to check whether the password the user gives matches the password in the `userLogin` object. The snippet should communicate whether the passwords matched to the user with console logs or JavaScript `alert`.
+
+Bonus: Modify your user login to give the user three chances to enter the correct password. 
 
 Bonus: Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alerts.
 
 
 ###Exercise 3: Security Questions
 
-1. Create an array called `securityQuestions`. Each element of `securityQuestion` will be an object with two keys: `question` and `expectedAnswer`. 
+1. Create an array called `securityQuestions`. Each element of `securityQuestions` will be an object with two keys: `question` and `expectedAnswer`. 
 1. Populate (fill) `securityQuestions` with at least three such objects. Feel free to just make them up. For example, one security question object might be:     
 	```
 	{ question: "What was your first pet's name?", expectedAnswer: "FlufferNutter" }
 	```
 
 
-1. Write code that goes through each of the security questions doing the following:
-  -- prompt the user with the question
-  -- check whether the user's input matches the expected answer
-  		-- if the answer does match, ask the next question
-  		-- if the answer doesn't match, stop asking questions and pop up an alert message.
+1. Write code that goes through each of the security questions doing the following:   
+  * prompt the user with the question    
+  * check whether the user's input matches the expected answer    
+  		* if the answer does match, ask the next question
+  		* if the answer doesn't match, stop asking questions and pop up an alert message.
