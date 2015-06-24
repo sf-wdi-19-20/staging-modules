@@ -39,4 +39,4 @@ Create a function that returns `true` if the number passed in is a prime number 
 
 ## primes(max)
 
-Using your `isPrime()` function, create a function `primes` that will return an array of all prime numbers up to, but not exceeding a max number.
+Using your `isPrime` function, create a function `primes` that will return an array of all prime numbers up to, but not exceeding a max number.
