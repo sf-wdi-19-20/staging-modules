@@ -19,7 +19,7 @@ Take a number, multiply it by itself, and return the product.
 
 **Function (concrete):**
 
-```
+```js
 var square = function(num) {
   return num * num;
 }
@@ -29,7 +29,7 @@ var square = function(num) {
 
 Your programs can "hand off" some of their work to functions the way you might hand off tasks to another person. When you take your laundry to a dry cleaner, the dry cleaner returns clean clothes to you a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
 
-```
+```js
 var dryClean = function(dirtyClothes) {
   // code that turns dirtyClothes into cleanClothes
   return cleanClothes;
@@ -56,7 +56,7 @@ var dryClean = function(dirtyClothes) {
 
 #### Function declaration
 
-```
+```js
 function greet() {
   console.log("Hello, there!");
 }
@@ -64,7 +64,7 @@ function greet() {
 
 *A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition moves to the top when your code runs.*
 
-```
+```js
 greet();
 
 function greet() {
@@ -76,7 +76,7 @@ function greet() {
 
 #### Function expression
 
-```
+```js
 var greet = function() {
   console.log("Hello, there!");
 }
@@ -84,7 +84,7 @@ var greet = function() {
 
 *When using a function expression, you must define the function above where you call it in your code.*
 
-```
+```js
 greet();
 
 var greet = function() {
@@ -100,7 +100,7 @@ It is acceptable to use either function declarations or function expressions to 
 
 The **parameters** are what you declare as being passed into the function in its definition.
 
-```
+```js
 var iHaveParameters = function(firstParam, secondParam, thirdParam) {
   // do something with the parameters
 }
@@ -108,13 +108,13 @@ var iHaveParameters = function(firstParam, secondParam, thirdParam) {
 
 The **arguments** are what is actually passed into the function when called.
 
-```
+```js
 iHaveParameters("one", 2, 3.33);
 ```
 
 The **return statement** is what the function outputs. Only one value returns from a function, and any code after the return statement won't run.
 
-```
+```js
 var functionThatReturns = function() {
   return true; // returns true
   var sum = 2 + 2; // doesn't run
@@ -123,7 +123,7 @@ var functionThatReturns = function() {
 
 The **function body** is everything inside the actual function.
 
-```
+```js
 var whatsInside = function() {
   var sum = 2 + 2; // start function body
   console.log(sum);
@@ -145,7 +145,7 @@ Scope represents the area of your program where a variable is defined. JavaScrip
 
 You can think of scope as a rule: *a new function introduces a new scope.*
 
-```
+```js
 // global scope
 var x = 1;
 
@@ -164,7 +164,7 @@ console.log(x)
 
 A **callback** is a function that is passed into another function. A function that can take a callback is known as a **first-class function**.
 
-```
+```js
 var consoleMe = function(message) {
   console.log("I'm the callback, now displaying message...");
   console.log(message);
@@ -182,31 +182,31 @@ firstClassFunction("Functions are fun!", consoleMe);
 
 1. Write a `multiply` function that finds the product of two numbers.
 
-  ```
+  ```js
   multiply(5, 7) => 35
   ```
 
 2. Write a function that takes in a number and returns `true` if the number is even and `false` if the number is odd (**Hint:** Look up the `%` operator).
 
-  ```
+  ```js
   isEven(4) => true
   ```
 
 3. Write a function that swaps two values at two different indexes in an array.
 
-  ```
+  ```js
   swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
   ```
 
 4. Write a function that generates a random number in a specified range (**Hint:** Look up Math.random()).
 
-  ```
+  ```js
   getRand(5, 10) => 8 (any number between 5 and 10)
   ```
 
 5. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
 
-  ```
+  ```js
   randArr(3) => [23, 11, 82]
   ```
 

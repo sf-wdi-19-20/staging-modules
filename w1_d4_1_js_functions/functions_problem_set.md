@@ -10,7 +10,7 @@ Write a function that takes two sorted arrays of numbers and returns a merged ar
 
 Write a function that counts the number of times each letter occurs in a given string. It should return an object containing the count for each letter. For example, the string "apple" would return the following:
 
-```
+```js
 {
   a: 1,
   p: 2,
@@ -25,7 +25,9 @@ Write a function that counts the number of times each letter occurs in a given s
 
 Write a function that takes an array of numbers and returns the sum of each number multiplied by its index.
 
-`count += (number * index)`
+```js
+count += (number * index)
+```
 
 ## numSquare(max)
 
