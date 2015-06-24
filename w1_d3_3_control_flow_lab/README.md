@@ -25,13 +25,7 @@ Hint: Be mindful of infinite loops. They will crash your browser, and you'll los
   * How would you change "0" to "No more"?
   * Use a JavaScript `prompt` to ask the user how many verses they want to hear.
 
-###Exercise 2: Sign Up 
-
-1. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alerts.
-
-Bonus: Write a code snippet to prompt a user for their email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share? Super Bonus: Try using [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). 
-
-###Exercise 3: Login
+###Exercise 2: Login
 
 4. Create a `userLogin` object with one key for a user's name and one key for the user's password. Just make up a user name and password.  Write a code snippet that prompts the user for their password with a message customized to the user. For example, if the user name you created is `octocat_rules`, the message should be `"Enter password for user octocat_rules."`
 
@@ -39,7 +33,7 @@ Bonus: Write a code snippet to prompt a user for their email address and check w
 
 Bonus: Modify your user login to give the user three chances to enter the correct password. 
 
-###Exercise 4: Security Questions
+###Exercise 3: Security Questions
 
 1. Create an array called `securityQuestions`. Each element of `securityQuestions` will be an object with two keys: `question` and `expectedAnswer`. 
 1. Populate (fill) `securityQuestions` with at least three such objects. Feel free to just make them up. For example, one security question object might be:     
@@ -53,3 +47,11 @@ Bonus: Modify your user login to give the user three chances to enter the correc
   * check whether the user's input matches the expected answer    
   		* if the answer does match, ask the next question
   		* if the answer doesn't match, stop asking questions and pop up an alert message.
+
+
+###Bonus: Sign Up   
+Try using [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). 
+
+1. Write a code snippet to prompt the user for a password and check whether the password is "strong." You decide what requirements to set for a strong password. If the password is NOT strong, your code should give the user an explanation of what they need to change either through console logs or through alerts.
+
+2: Write a code snippet to prompt a user for their email address and check whether an the address looks real (this is called **input validation**). Hint: what features do valid email addresses share? 
