@@ -67,7 +67,7 @@ Do these Exercises inside console in Chrome
 
 #####Part 1
 
-1. Select all of the list elements (`<li>`). 
+1. Select all of the list elements (`<li>`).
 2. Set '.style.borderBottom' on EACH of them
 3. You'll need to loop over each element to do this.
 
@@ -119,25 +119,25 @@ Do these Exercises inside console in Chrome
 ```
 ###Do these Exercises inside "events.js" and then test code in Chrome console.
 
-##Part 1
+####Part 1
  1. Use '.addEventListener' to listen for the 'click' event on the '<button>'
  2. Pop up an 'aler()' whenever a click occurs.
 
-##Part 2
+####Part 2
  1. Change the 'backgroundColor' of the box to 'yellow' when the mouse is over it.
  2. Change the back to 'green' when the mouse leaves the box.
     hint: 'mouseover' and 'mouseout' events may be of use.
 
-##Part 3
+####Part 3
  1. Listen for the 'submit' event on the '<form>'
  2. 'alert()' the text that is typed into the text field.
 
 
-##Part 4
+####Part 4
  **Notice that the page refreshes (see the URL bar)**
 1. Use 'event.preventDefault()' to stop the page from refreshing.
 
-##Part 5
+####Part 5
 
 1. Listen for the 'click' event on the '<ul>' element
 2. Use 'event.target' to see which '<li>' was clicked.
