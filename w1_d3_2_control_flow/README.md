@@ -87,12 +87,13 @@ while (timeBeforeWork > 180000) { // Remember JS counts time in milliseconds
 
 ### Docs & Resources
 
+[Loops - JSforcats](http://jsforcats.com/#loops)
+</br>
 [Conditionals - Codeacademy](http://www.codecademy.com/glossary/javascript/if-statement)
 </br>
 [Loops - CodeAcademy](http://www.codecademy.com/glossary/javascript/loops)
 </br>
-[Loops - JSforcats](http://jsforcats.com/#loops)
-</br>
+
 
 ### Basic Challenges
 1. Which of the following are truthy values? (hint: try `if("abc"){"console.log('I'm truthy!')"}` in the JS console)
@@ -106,16 +107,13 @@ while (timeBeforeWork > 180000) { // Remember JS counts time in milliseconds
   * 0
   * 3.14159
   * Object
-
 2. Log to the console "This is awesome!" 25 times.
 3. Create a snippet inside of developer tools. Create snippets to do the rest of the challenges.
-4. In your snippet, create a new variable that is an array of 4 phrases: `Howdy there`, ` ` , `javascript`, and `Pair Programming`.
+4. In your snippet, create a new variable that is an array of 4 phrases: `Howdy there`, `OMG`, `javascript`, and `Pair Programming`.
 5. Loop over the array and console log each phrase.
 6. Loop over the array and log each phrase to the console if its total length is 4 or longer. Otherwise, console log that the phrase is too short.
-
-7. Come up with three different ways to break a `for` loop that result in three different errors. What three different errors did you get?
-
-
+6. Come up with three different ways to break a `for` loop that result in three different errors. What three different errors did you get?
+>>>>>>> 0d7e681219bf97d39afc9c6d998bead2aa3687af
 1. Jimmy loves roller coasters, but there are a bunch of rules (ugh!) for riding:
 
 For starters, it costs 5 tokens. Here's how we might code that:
@@ -150,6 +148,19 @@ Edit the code above to check the following additional Requirements:
 10. Create and log an array containing only the objects with an age over 20.
 11. Create and log an array of all the names, in which any names that begin with a consonant are upper case.
 12. Create and log an array that is the original array in a random order.
+
+
+### Homework
+
+1. Write the "Bottles of beer on the wall" song:
+
+		5 bottles of beer on the wall,
+		5 bottles of beer!
+		Take one down and pass it around,
+		4 bottles of beer on the wall
+  * How would you fix "1 bottles of beer"?
+  * How would you change "0" to "No more"?
+  * Use a prompt to ask the user how many verses they want to hear
 
 ### External Reading and Tutorials
 

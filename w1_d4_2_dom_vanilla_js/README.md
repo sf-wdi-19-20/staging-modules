@@ -18,19 +18,78 @@ Vanilla JS underlies all Javascript frameworks. Understanding basic JS is an imp
 
 ### Demo (How?)
 
+#### Select Elements
+
+Get DOM element by selector
 ```
-var el = document.querySelector("#myId");
-var arr = document.querySelector(".myclass");
+var h1Elements = document.querySelector("h1")
+var myId = document.querySelector("#myId")
+var primaryButtons = document.querySelector("btn-primary")
 ```
+
+#####Or
+
+Get DOM element by id
+```
+var el = document.getElementById("#myId");
+```
+
+Get DOM elements by class
+```
+var arr = document.getElementsByClassName(".myclass");
+```
+
+Get DOM elements by HTML tag
+```
+var el = document.getElementsByTagName(".myclass");
+```
+
+#### Add Dynamic Changes to Events with Functions
+Add a function
+```
+el.addEventListener("click", function() {
+  alert("you clicked a button");
+});
+```
+
+Change or add a style attribute value
+```JS
+el.style.color = "red"
+el.style.display= "none" // hide the element
+```
+
+Change text
+```
+el.innerText = "New Text!"
+```
+
+Add class
+```
+el.classList.add("danger")
+```
+
+Prevent Default Behavior
+```
+var button = document.querySelector("a#san-francisco_cta");
+button.onclick = function(event){
+    event.preventDefault(); // SUPER IMPORTANT PART
+    alert("Hahah! Now you get me instead")
+};
+```
+
 
 #Challenges
 
+### Docs & Resources
 
-**Basic Challenges:**
+* [Document Object Model docs (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/API/document)
+* [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
+* [List of DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-1. Create a Directory called 'Dom'
-  (hint:  you can do this through the terminal)
-2. Inside 'Dom', make a file called collections.html and collections.js
+###Basic Challenges:
+
+1. Create a directory called 'vanilla-dom'
+2. Inside 'vanilla-dom', make a file called `index.html` and `scripts.js`
 3. Copy and Paste this code into the collections.html:
 
 ```
@@ -40,7 +99,7 @@ var arr = document.querySelector(".myclass");
     <title>Hello, Walter!</title>
   </head>
   <body>
-    <h1>DOM Collections</h1>
+    <h1 id="title">DOM Collections</h1>
     <ul>
       <li class="datatype">Number</li>
       <li class="datatype">Boolean</li>
@@ -55,30 +114,28 @@ var arr = document.querySelector(".myclass");
   </body>
 </html>
 ```
-4. Open collections.html in Chrome.
 
-##Exercises
 Do these Exercises inside console in Chrome
   (hint: Command + Option + J)
 
-###Part 1
+#####Part 1
 
-1. Use '.getElementsByTagName' to retrieve all of the '<li>' elements.
-2. Set '.style.borderBottom' on EACH of them
+1. Select all of the list elements (`<li>`).
+2. Loop over them to add a border to the bottom of each.
 3. You'll need to loop over each element to do this.
 
-###Part 2
+#####Part 2
 
-1. Use '.getElementsByClassName' to retrieve all of the elements with the class 'datatype'.
+1. Retrieve all the elements with the class `datatype`.
 2. Use '.style.color' and change the font color to green.
 3. You'll need to loop over each element.
 
-###Part 3
+#####Part 3
 
 1. Use '.querySelectorAll' to retrieve all of the elements with a class of 'function'.
 2. Using a loop change the color of each element to blue.
 
-##Stretch Challenges:
+###Stretch Challenges:
 
 1. Inside your DOM directory, create a new directory called 'Events'.
 2. Create 'events.css', 'events.html' and 'events.js' files inside the 'Events' directory.
@@ -115,33 +172,30 @@ Do these Exercises inside console in Chrome
 ```
 ###Do these Exercises inside "events.js" and then test code in Chrome console.
 
-##Part 1
+####Part 1
  1. Use '.addEventListener' to listen for the 'click' event on the '<button>'
  2. Pop up an 'aler()' whenever a click occurs.
 
-##Part 2
+####Part 2
  1. Change the 'backgroundColor' of the box to 'yellow' when the mouse is over it.
  2. Change the back to 'green' when the mouse leaves the box.
     hint: 'mouseover' and 'mouseout' events may be of use.
 
-##Part 3
+####Part 3
  1. Listen for the 'submit' event on the '<form>'
  2. 'alert()' the text that is typed into the text field.
 
 
-##Part 4
+####Part 4
  **Notice that the page refreshes (see the URL bar)**
 1. Use 'event.preventDefault()' to stop the page from refreshing.
 
-##Part 5
+####Part 5
 
 1. Listen for the 'click' event on the '<ul>' element
 2. Use 'event.target' to see which '<li>' was clicked.
    a. 'alert()' the specific vegetable that was selected.
   **Make sure you only use one event listener instead of adding an event
   handler to each `<li>`**
-
-
-### Docs & Resources
 
 # Further Reading
