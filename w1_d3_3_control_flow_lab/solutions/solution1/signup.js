@@ -1,36 +1,25 @@
+// Here are some email addresses we want to allow:
+// 	student@generalassemb.ly
+// 	jane.doe@email.com
+// 	Bob2390@aol.com
+
+// Here are some email addressed we don't want to allow:
+// 	@@@@@
+// 	email
+// 	fake@email.don't_spam_me
+
+// Based on these, let's say the basic pattern for an email is:
+// 	- some letters or digits, and possibly a few dots (.)s
+// 	- an @ (only one of these in the email address)
+// 	- some more letters or digits,
+// 	- a final dot,
+// 	- and 2-3 more letters that might be ly, com, co, and so on.
+
 
 var email = prompt("Enter your email address!");
 
-
-// Let's an email address should at least follow this structure:
-// a@b.c
-
-/* First, let's try checking this with plain conditionals: */
-
-var isValid = true;
-
-// one easy thing to check is that there's an @
-var atIndex = email.indexOf("@");
-// the @ should be somewhere after the first character
-// but far enough from the end to leave room for .com (etc)
-if (atIndex < 1 || atIndex > email.length-3){
-	isValid = false;
-}
-
-// there should also be a .
-var dotIndex = email.indexOf(".");
-if (dotIndex < 3 || dotIndex > email.length-2){
-	isValid = false;
-}
-
-if (isValid){
-	console.log("basic test: email okay");
-} else {
-	console.log("basic test: invalid email");
-}
-
-/* With regular expressions, we can be much more specific with even less code! */
-pattern = /^[a-zA-z][a-zA-Z0-9_]*@[a-zA-Z0-9]*\.[a-z]{1,3}$/
+/* With regular expressions, we can accopmlish this with very little code! */
+pattern = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-z]{2,3}$/
 matches = email.match(pattern)
 if (matches != null){
 	console.log("regex test: email okay");
@@ -40,26 +29,41 @@ if (matches != null){
 
 /***********************/
 
+// get the password from the user and save it as a variable
 var password = prompt("Enter your password!");
+
+// store all the problems with the password in an array
 var problems = [];
 
 // a strong password should be at least 8 characters long!
 if (password.length < 8){
 	problems.push("Password must be at least 8 characters long!");
 } 
+
 // let's also say it should have at least one lowercase letter
 if (password.search(/[a-z]/) === -1){
 	problems.push("Password must contain at least one lowercase letter.");
 }
+
 // ... and one uppercase
 if (password.search(/[A-Z]/) === -1){
 	problems.push("Password must contain at least one uppercase letter.");
 }
+
 // ... and one number
 if (password.search(/[0-9]/) === -1){
 	problems.push("Password must contain at least one number.");
 }
 
+// Check if there were any problems with the password
+if (problems.length !== 0){
+	// log each of the problems
+	for (var i=0; i<problems.length; i++){
+		console.log(problems[i]);
+	}
+} else {
+	console.log("nice password!");
+}
 
 
 
