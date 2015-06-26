@@ -8,6 +8,18 @@ body {
   margin-bottom: 20px;
 }
 
+.about {
+  display: none;
+}
+
+.projects {
+  display: none;
+}
+
+.contact {
+  display: none;
+}
+
 /* ==================================================================
    Social icon custom styles
    ==================================================================*/
