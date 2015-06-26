@@ -17,10 +17,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- Custom styles -->
-  <link href="style.css" rel="stylesheet">
+  <!-- <link href="style.css" rel="stylesheet"> -->
 
   <!-- Asap font -->
   <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
@@ -83,7 +86,7 @@
                 <!-- Form actions -->
                 <div class="form-group">
                   <div class="col-md-12 text-right">
-                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    <button id="submit" type="submit" class="btn btn-primary btn-lg">Submit</button>
                   </div>
                 </div>
               </fieldset>
@@ -92,6 +95,18 @@
           </div>
 
   </div>
-  
+
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+          <div id="mouseover">Mouseover me!</div>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+          <div id="dontMouseover">Don't mouseover me!</div>
+      </div>
+  </div>
+
 </body>
 </html>
