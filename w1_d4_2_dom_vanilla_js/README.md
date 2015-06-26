@@ -18,6 +18,24 @@ Vanilla JS underlies all Javascript frameworks. Understanding basic JS is an imp
 
 ### Demo (How?)
 
+#### Include JavaScript files in your project
+
+```HTML
+<html>
+<head>
+  <title>Funky Blog</title>
+  <!-- LOCAL SCRIPTS -->
+  <script src="scripts/funky-script.js"></script>
+
+  <!-- REMOTE SCRIPT (FROM CONTENT DELIVERY NETWOR(CDN)) -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- YOUR HTML -->
+</body>
+</html>
+```
+
 #### Select Elements
 
 Get DOM element by selector
@@ -27,7 +45,7 @@ var myId = document.querySelector("#myId")
 var primaryButtons = document.querySelector("btn-primary")
 ```
 
-#####Or
+###### Or
 
 Get DOM element by id
 ```
@@ -50,12 +68,25 @@ Add a function
 el.addEventListener("click", function() {
   alert("you clicked a button");
 });
+
+// Other Event Listeners
+// "mouseenter"
+// "mouseleave"
+// "submit"
 ```
+
 
 Change or add a style attribute value
 ```JS
-el.style.color = "red"
-el.style.display= "none" // hide the element
+var arr = document.getElementsByClassName('text-good');
+// console.log(arr)
+
+for(i = 0; i < arr.length; i++) {
+    console.log(i)
+    console.log(arr[i]);
+    arr[i].style.color = "green"
+    // arr[i].style.display= "none" // hide the element
+}
 ```
 
 Change text
@@ -77,7 +108,6 @@ button.onclick = function(event){
 };
 ```
 
-
 #Challenges
 
 ### Docs & Resources
@@ -86,116 +116,20 @@ button.onclick = function(event){
 * [Document Object Model docs (W3Schools)](http://www.w3schools.com/jsref/dom_obj_document.asp)
 * [List of DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-###Basic Challenges:
+### Basic Challenges:
+0. Navigate to Craigslist SF.
+1. Type "document" in the console. Examine this tree-structured object.
+2. Add an event listener to the craigslist logo that when you click it changes the font color of links to green. (hint: make sure to prevent the default behavior)
+3. Make it so when you click the logo it changes the link color to either blue, red, green, or yellow. (Cragslist DISCO!). Can you get it to select a random color?
+4. Make it so when you click any link a popup comes up with the link's text.
+5. When you mouse over links, make their background color turn to pink. Can you make it turn back to white when the mouse is not hovering over the element?
 
-1. Create a directory called 'vanilla-dom'
-2. Inside 'vanilla-dom', make a file called `index.html` and `scripts.js`
-3. Copy and Paste this code into the collections.html:
+### Stretch Challenges & Homework - Making your Portfolio Site Dynamic
 
-```
-  <!doctype html>
-<html>
-  <head>
-    <title>Hello, Walter!</title>
-  </head>
-  <body>
-    <h1 id="title">DOM Collections</h1>
-    <ul>
-      <li class="datatype">Number</li>
-      <li class="datatype">Boolean</li>
-      <li class="datatype">String</li>
-      <li class="loop">for</li>
-      <li class="loop">while</li>
-      <li class="loop">for...in</li>
-      <li class="function">push()</li>
-      <li class="function">pop()</li>
-      <li class="function">shift()</li>
-    </ul>
-  </body>
-</html>
-```
-
-Do these Exercises inside console in Chrome
-  (hint: Command + Option + J)
-
-#####Part 1
-
-1. Select all of the list elements (`<li>`).
-2. Loop over them to add a border to the bottom of each.
-3. You'll need to loop over each element to do this.
-
-#####Part 2
-
-1. Retrieve all the elements with the class `datatype`.
-2. Use '.style.color' and change the font color to green.
-3. You'll need to loop over each element.
-
-#####Part 3
-
-1. Use '.querySelectorAll' to retrieve all of the elements with a class of 'function'.
-2. Using a loop change the color of each element to blue.
-
-###Stretch Challenges:
-
-1. Inside your `vanilla-dom` directory, create a new directory called `events`.
-2. Create `style.css`, `index.html` and `app.js` files inside the `events` directory.
-3. Copy and paste this code into `index.html`
-
-```
-<!doctype html>
-  <head>
-    <title>Hello, Wanda!</title>
-    <link rel="stylesheet" type="text/css" href="style.css"></link>
-  </head>
-  <body>
-    <button id="clicker">Click</button>
-
-    <div id="mouser">Mouse Over</div>
-
-    <form id="former">
-      <input type="text" name="term" placeholder="search term">
-      <input type="submit" value="Submit">
-    </form>
-
-
-    <h1>Vegetables</h1>
-    <ul id="vegetables">
-      <li>Carrots</li>
-      <li>Kale</li>
-      <li>Broccoli</li>
-      <li>Chard</li>
-    </ul>
-
-    <script type="text/javascript" src="app.js"></script>
-  </body>
-</html>
-```
-###Do these Exercises inside "events.js" and then test code in Chrome console.
-
-####Part 1
- 1. Use `.addEventListener`t to listen for the 'click' event on the `<button>`.
- 2. Pop up an `alert()` whenever a click occurs.
-
-####Part 2
- 1. Change the `backgroundColor` of the box to 'yellow' when the mouse is over it.
- 2. Change the back to 'green' when the mouse leaves the box.<br>
-    (hint: 'mouseover' and 'mouseout' events may be of use.)
-
-####Part 3
- 1. Listen for the 'submit' event on the `<form>`
- 2. `alert()` the text that is typed into the text field.
-
-
-####Part 4
- **Notice that the page refreshes (see the URL bar)**
-1. Use `event.preventDefault()` to stop the page from refreshing.
-
-####Part 5
-
-1. Listen for the 'click' event on the `<ul>` element
-2. Use `event.target` to see which `<li>` was clicked.
-   a. 'alert()' the specific vegetable that was selected.
-  **Make sure you only use one event listener instead of adding an event
-  handler to each `<li>`**
+6. Add a contact form (email, subject, messasge) to your portfolio project. Remember to use Bootstrap's input styling.
+8. When the form is submitted make an alert display the text that is typed into the text field. Do you need to prevent the default behavior?
+1. Add an "about me", "projects", and "background" buttons to your site. When they are clicked let a different corresponding section appear and hide the other two without reloading the page. This is called "pill tabs."
+2. For extra credit: Add two more dynamic elements to your portfolio site.
+3. If you are looking for more, go back to the stretch challenges from js_functions lesson this morning.
 
 # Further Reading

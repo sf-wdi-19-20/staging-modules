@@ -2,173 +2,226 @@
 
 | Objectives |
 | :--- |
-| Explain the significance of calling a function |
-| Trace the flow of a program, with function calls, based on its code |
+| Explain what a function is and why we should use functions |
 | Create a function definition based on written specifications |
-| Write anonymous and named functions |
 | Implement functions that incorporate conditionals, loops, and other function calls |
-| Explain and use closures |
-| Write recursive functions and functions that take other functions as arguments |
+| Identify the scope where a variable is defined |
 
 ## What are functions?
-  * Computer science can essentially be divided into two core elements: **data structures** and **algorithms**.
 
-  * A **data structure** organizes information.
+A [**function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) is a concrete implementation of an algorithm in a computer language. *It is a "subprogram" that encapsulates a specific behavior.*
 
-  ```
-  "hello world", 6.287364, 76, { name: "General Assembly", streetAddress: "255 Bush Street", floor: 5 }
-  ```
+**Algorithm (abstract):**
 
-  * An **algorithm** abstractly describes how to manipulate data to solve a problem.
+```
+Take a number, multiply it by itself, and return the product.
+```
 
-  ```
-  Take a number, multiply it by itself, and return the product.
-  ```
+**Function (concrete):**
 
-  * A [**function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) is a concrete implementation of an algorithm in a computer language. *It is a "subprogram" that encapsulates a specific behavior.*
-
-  ```
-  var square = function(num) {
-      return num * num;
-  }
-  ```
+```js
+var square = function(num) {
+  return num * num;
+}
+```
 
 #### Analogy: Dry Cleaner
-  Your programs can "hand off" some of their work to functions the way you might hand off tasks to another person. When you take your laundry to a dry cleaner, the dry cleaner returns clean clothes to you a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
+
+Your programs can "hand off" some of their work to functions the way you might hand off tasks to another person. When you take your laundry to a dry cleaner, the dry cleaner returns clean clothes to you a day or two later. You don't have to know how to use the dry cleaning machinery, or even exactly what it does (and maybe the dry cleaner wants to protect a secret step in the process!). Plus, many other customers can go to the same dry cleaner. It's so DRY!
+
+```js
+var dryClean = function(dirtyClothes) {
+  // code that turns dirtyClothes into cleanClothes
+  return cleanClothes;
+}
+```
 
 ## Why use functions?
-  > "Functions are the bread and butter of JavaScript programming.
 
-  > The concept of wrapping a piece of program in a value has many uses.
+> "Functions are the bread and butter of JavaScript programming.
 
-  > It is a tool to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other."
+> The concept of wrapping a piece of program in a value has many uses.
 
-  > -Marjin Haverbeke, *Eloquent Javascript*
+> It is a tool to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other."
+
+> -Marjin Haverbeke, *Eloquent Javascript*
 
 #### Benefits of Using Functions
-  * **Encapsulation** - Keeping code for the same purpose in the same place makes finding it and updating it easier.
 
-  * **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function!
+* **Encapsulation** - Keeping code for the same purpose in the same place makes finding it and updating it easier.
+
+* **Code Reuse** - "Don't Repeat Yourself" is a principle of coding - keep your programs **DRY**! Reusing code makes it easier to change how your program works, since you only have to make updates in one place. If you find yourself writing the same code two or more times, a good rule of thumb is to move it into a function!
 
 ## Defining a Function
 
 #### Function declaration
 
-  ```
-  function greet() {
-      console.log("Hello, there!");
-  }
-  ```
+```js
+function greet() {
+  console.log("Hello, there!");
+}
+```
 
-  *A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition will be hoisted to the top when your code runs.*
+*A function declaration is [hoisted](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/#hoisting) to the top of your code. This means you can call your function above its definition, since the definition moves to the top when your code runs.*
 
-  ```
-  greet();
+```js
+greet();
 
-  function greet() {
-      console.log("Hello, there!");
-  }
+function greet() {
+  console.log("Hello, there!");
+}
 
-  // prints "Hello, there!"
-  ```
+// prints "Hello, there!"
+```
 
 #### Function expression
 
-  ```
-  var greet = function() {
-      console.log("Hello, there!");
-  }
-  ```
+```js
+var greet = function() {
+  console.log("Hello, there!");
+}
+```
 
-  *When using a function expression, you must define the function above where you call it in your code.*
+*When using a function expression, you must define the function above where you call it in your code.*
 
-  ```
-  greet();
+```js
+greet();
 
-  var greet = function() {
-      console.log("Hello, there!");
-  }
+var greet = function() {
+  console.log("Hello, there!");
+}
 
-  // Uncaught ReferenceError: greet is not defined
-  ```
-  ---
-  It is acceptable to use either function declarations or function expressions to define your functions, but make sure to consistently stick to the same convention.
+// Uncaught ReferenceError: greet is not defined
+```
+---
+It is acceptable to use either function declarations or function expressions to define your functions, but make sure to consistently stick to the same convention.
 
-### Componenets of a Function
-  * diagram a function on the whiteboard
+## Components of a Function
 
-  Function descriptions may take you back to high school math, but you can always start to approach them by parsing out the function's arguments and what it should return.
+The **parameters** are what you declare as being passed into the function in its definition.
 
-  * takes, takes in, expects -> arguments
-  * gives back, returns, sends back -> return instructions
-  * everything else probably says what the function should do, or what its name should be
+```js
+var iHaveParameters = function(firstParam, secondParam, thirdParam) {
+  // do something with the parameters
+}
+```
 
-  Why do we say the function "takes" and "returns"? This language exactly mirrors how control flow works with functions! You can imagine JavaScript control flow as a person talking on the phone with your program. When you write a function call, it's like JS puts the main program on hold and contacts the function. If another function is called, JS puts the first function on hold to contact the new one. When the function finishes, JS returns to the previous call.
+The **arguments** are what is actually passed into the function when called.
 
-  To keep track of the functions JS has on hold, it uses a _call stack_. Remember the stack data structure? As JS calls a new function, it pushes the function onto the call stack. When a function returns, it pops that function off of the call stack. The control flow stays with the top function on the call stack.
+```js
+iHaveParameters("one", 2, 3.33);
+```
 
-  * show returning vs. printing in console
-  * Stop here for challenges 1-2
+The **return statement** is what the function outputs. Only one value returns from a function, and any code after the return statement won't run.
 
-### Scope
+```js
+var functionThatReturns = function() {
+  return true; // returns true
+  var sum = 2 + 2; // doesn't run
+}
+```
 
-  ```
-  var x = 1;
+The **function body** is everything inside the actual function.
 
-  var changeNum = function (x) {
-      x = 2;
-  }
+```js
+var whatsInside = function() {
+  var sum = 2 + 2; // start function body
+  console.log(sum);
+  return sum; // end function body
+}
+```
+---
+We say that a function **takes in arguments** and **returns** something to us. You can imagine JavaScript control flow as a person talking on the phone with your program. When you call a function, it's like JS puts the main program on hold and contacts the function. If another function is called, JS puts the first function on hold to contact the new one. When the function finishes, JS returns to the previous call.
 
-  changeNum(x);
+To keep track of the functions JS has on hold, it uses a **call stack**. As JS calls a new function, it pushes the function onto the call stack. When a function returns, it pops that function off of the call stack.
 
-  console.log(x)
-  // logs what?
-  ```
+![](http://i.stack.imgur.com/4Z6xK.png)
 
-  * _closures_ - In JavaScript, a function "remembers" the scope where it was defined. This allows us to use the closure design pattern.
+* Some computer science languages refer to functions as methods. The same call-stack structure shown in the diagram applies to JavaScript functions.
 
-### Callbacks
+## Scope
 
-  * _callbacks_ - In JavaScript, functions are objects that can be passed around like any other. This allows us to use the callback design pattern.
+Scope represents the area of your program where a variable is defined. JavaScript has two scopes: **global scope** and **local scope**.
 
+You can think of scope as a rule: *a new function introduces a new scope.*
+
+```js
+// global scope
+var x = 1;
+
+var changeNum = function (x) {
+  // local scope
+  x = 2;
+}
+
+changeNum(x);
+
+console.log(x)
+// logs what?
+```
+
+## Callbacks
+
+A **callback** is a function that is passed into another function. A function that can take a callback is known as a **first-class function**.
+
+```js
+var consoleMe = function(message) {
+  console.log("I'm the callback, now displaying message...");
+  console.log(message);
+}
+
+var firstClassFunction = function(message, callback) {
+  console.log("I'm the first class function, now calling the callback...");
+  callback(message);
+}
+
+firstClassFunction("Functions are fun!", consoleMe);
+```
 
 ## Challenges
 
-  1. Write a `multiply` function that finds the product of two numbers.
+1. Write a `multiply` function that finds the product of two numbers.
 
-  ```
+  ```js
   multiply(5, 7) => 35
   ```
 
-  2. Write a function that swaps two values at two different indexes in an array.
+2. Write a function that takes in a number and returns `true` if the number is even and `false` if the number is odd (**Hint:** Look up the `%` operator).
 
+  ```js
+  isEven(4) => true
   ```
+
+3. Write a function that swaps two values at two different indexes in an array.
+
+  ```js
   swap(["moe", "larry", "curly"], 0, 2) => ["curly", "larry", "moe"]
   ```
 
-  3. Write a function that generates a random number in a specified range.
+4. Write a function that generates a random number in a specified range (**Hint:** Look up Math.random()).
 
-  ```
+  ```js
   getRand(5, 10) => 8 (any number between 5 and 10)
   ```
 
-  4. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
+5. Write a function that generates an array of specified length that contains random numbers from 1 to 100.
 
-  ```
+  ```js
   randArr(3) => [23, 11, 82]
   ```
 
 ## Stretch Challenges
 
-  1. Write a `getMax` function that finds the maximum number in an array.
+1. Write a `getMax` function that finds the maximum number in an array.
 
-  2. Write a function called `explainMather` that takes in three arguments: two numbers and a function called `mather`. The `explainMather` function should pass the two numbers into `mather` and write out a message in the console to show the two number inputs and the output from `mather`. Test `explainMather` by passing in your `multiply` function from challenge #1.
+2. Write a function called `explainMather` that takes in three arguments: two numbers and a function called `mather`. The `explainMather` function should pass the two numbers into `mather` and write out a message in the console to show the two number inputs and the output from `mather`. Test `explainMather` by passing in your `multiply` function from challenge #1.
 
-  3. Write a `vowels` function that counts the number of vowels in a given string.
+3. Write a `vowels` function that counts the number of vowels in a given string.
 
-  4. Work through more functions problems [here](more_functions.md).
+4. Work through the [functions problem set](functions_problem_set.md).
 
 ## Further Reading
-  * [Functions - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
-  * [Functions - Eloquent JavaScript](http://eloquentjavascript.net/03_functions.html)
-  * [Demystifying JavaScript Variable Scope and Hoisting](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting)
+
+* [Functions - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+* [Functions - Eloquent JavaScript](http://eloquentjavascript.net/03_functions.html)
+* [Demystifying JavaScript Variable Scope and Hoisting](http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting)
