@@ -1,7 +1,8 @@
 #Control Flow Challenge Solutions
-### Basic Challenges
-1. Which of the following are truthy values? (hint: try `if("abc"){"console.log('I'm truthy!')"}` in the JS console).    
-	truthy: 1, "abc", [], {}, -1, (1+1), 3.14159, Object    
+## Basic Challenges
+
+1. Which of the following are truthy values? (hint: try `if("abc"){"console.log('I'm truthy!')"}` in the JS console).       
+	truthy: 1, "abc", [], {}, -1, (1+1), 3.14159, Object       
 	falsey: "", 0    
 
 2. Log to the console "This is awesome!" 25 times.   
@@ -9,6 +10,7 @@
 	for (var i=0; i<25; i++){
 		console.log("This is awesome!");
 	}
+	```
 
 3. Create a snippet inside of developer tools. Create snippets to do the rest of the challenges.
 
@@ -288,8 +290,7 @@
 
 12. Create and log an array that is the original array in a random order.
 
-Note: A good algorithm is Fisher-Yates.
-@TODO: implement Fisher-Yates instead of this full swap.
+	Note: A good algorithm is Fisher-Yates, which is *not* the algorithm below.
 
 	```
 	var shuffledPets = [];
