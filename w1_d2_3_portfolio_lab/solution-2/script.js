@@ -34,35 +34,5 @@ window.addEventListener("DOMContentLoaded", function() {
     alert("See, I told you not to mouseover me...");
   });
 
-
-
-  // Trying to implement pill tabs manually
-
-  // var about = document.getElementById("about");
-
-  // var aboutInfo = document.getElementById("aboutInfo");
-
-  // var projects = document.getElementById("projects");
-
-  // var projectsInfo = document.getElementById("projectsInfo");
-
-  // projects.addEventListener("click", function(event) {
-  //   event.preventDefault();
-  //   // turn about off
-  //   aboutInfo.style.visibility = "hidden";
-  //   // turn projects on
-  //   projectsInfo.style.visibility = "visibile";
-  // });
-
-  // about.addEventListener("click", function(event) {
-  //   event.preventDefault();
-  //   // turn projects off
-  //   projectsInfo.style.visibility = "hidden";
-  //   // turn about on
-  //   aboutInfo.style.visibility = "visible";
-  // });
-
-
-
 })
 
