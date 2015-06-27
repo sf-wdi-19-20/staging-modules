@@ -1,16 +1,16 @@
-#Object Oriented Programming 
+#Object Oriented Programming
 
 ##Objectives
 
-Students will be able to...   
+Students will be able to...
 
-* Summarize key tenents of the Object Oriented Programming paradigm
+* Summarize key tenants of the Object Oriented Programming paradigm
 * Model real-world data and relationships with JavaScript objects
 * Justify choices of which methods and attributes to include; and whether to put them on a constructor, a prototype, or a single object
 
 ##Programming Paradigms
 
-So far, we've been working with **procedural programming**, putting blocks of code in functions (aka procedures) that we call at various points in the program. 
+So far, we've been working with **procedural programming**, putting blocks of code in functions (aka procedures) that we call at various points in the program.
 
 
 ```
@@ -39,7 +39,7 @@ behaviors <--> methods (functions)
   * data is "embedded" in each instance
 
 
- ###Prototypes   
+ ###Prototypes
   * all instances share the same function and variable declarations
   * when you update the prototype, previously created instances DO get the updates
   * data is "referenced" from the prototype copy
@@ -48,11 +48,6 @@ behaviors <--> methods (functions)
 
 1. Work with your table to list important attributes and methods for a Car object type.
 
-2. Create a constructor for the Car object type. 
+2. Create a constructor for the Car object type.
 
 3. Create a "private" `_price` variable for the Car object.  Create a getter method and a setter for the `_price` property.
-
-
-
-
-
