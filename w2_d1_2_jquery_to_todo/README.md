@@ -1,6 +1,6 @@
 #Title
 
-| set up a new web development project to use jQuery |  (Adam covers: CDN)
+| set up a new web development project to use jQuery |  (Adam covers: CDN, but more towards refactoring)
 | change the contents and style of DOM elements using jQuery | (Adam covers)
 
 | add event listeners to DOM elements using jQuery | (Adam covers: click)
@@ -11,24 +11,50 @@
 | :--- |
 |  |
 | Students will be able to . . . |
+| set up a new web development project to use jQuery |
 | change the structure of the DOM using jQuery (wording?)| (append, remove)
 | gather user input from forms |  (submit)
 
 
 
-### Motivation
+## Motivation
 
-jQuery is a widely-used open source library that makes client-side JavaScript tasks easier.
+jQuery is a small, feature-rich JavaScript library. It makes things like DOM manipulation, event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers. It allows us to write expressive code and overcome browser compatibility issues in a way that is faster and more convenient than writing plain JavaScript. 
 
-### Analogy 
+## Setup 
 
-For many tasks, using jQuery is faster and more convenient than writing plain JavaScript. It's like driving across the country instead of taking a wagon on the Oregon Trail. 
+###CDN
 
-### Setup 
+As we've seen with Bootstrap, Content Delivery Networks (CDNs) serve distributed files to users that are visiting websites. CDNs are an alternative to serving files yourself, and they offer a few significant benefits versus serving your own copy of popular libraries:
 
-Include jQuery in your HTML files through a CDN: 
+- Auto-updating: Most CDNs allow you to link to the "latest" version of a library, so you don't have to monitor for updates
+- Faster load times through caching: When you visit a website, your browser may "cache" its content, saving it so it's faster and easier to access later.  It's likely your users have been on other sites that link to CDNs for a popular library, so the file may already be cached by their browser.
+- Reduced hosting costs: Hosting a website (making it available online) often gets more expensive as you serve more data yourself. 
 
-`<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>`
+Include jQuery in your projects with a CDN. Find the jQuery CDN either by googling "JQuery CDN" or heading to [cdnjs](https://cdnjs.com/) and searching for the JS library you're looking for.
+
+
+###Documentation
+
+It is necessary to reference the [jQuery Documentation](http://api.jquery.com) in order to get the most out of the library.
+
+The website refers to its **API Documentation**.
+
+
+###APIs
+
+An *Application Programming Interface* is a set of predefined functions that can be called on in order to execute specific commands. API's will typically have documentation outlining proper usage.
+
+Thinking of a restaurant: the menu is the API, ordering is executing an API call, the food is your output.
+
+
+##Challenge: Project Setup
+
+Feel free to reference this morning's lesson!
+
+1. Start a single-page project called "To Do". Create the necessary files for your site. 
+2. Add jQuery to your project with a CDN.  Also add Bootstrap.
+3. Why do we add stylesheets in the <head> and javascript at the end of the <body>? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
 
 # Demo & Learning Activities
 
@@ -121,7 +147,7 @@ $topPost.animate({ opacity: 0.25 }, 5000);
 ```
 
 
-#Challenges
+
 
 ### Docs & Resources
 
