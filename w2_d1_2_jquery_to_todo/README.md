@@ -66,37 +66,30 @@ Feel free to reference this morning's lesson!
 
 ##Element Creation
 
-JavaScript gives us tools to change the contents and style of existing DOM elements. It also lets us change the structure of the DOM - adding and removing elements while the site is running.
+JavaScript gives us tools to change the contents and style of existing DOM elements. It also lets us change the structure of the DOM - adding and removing elements while the site is running. Of course, jQuery gives us a way to do this too. What do the code samples below do?
 
 Standard DOM API
 
 ```
 var p = document.createElement('p');
 p.appendChild(document.createTextNode('Hello WDI!!!!!'));
-p.style.cssFloat = 'left';
-p.style.backgroundColor = 'red';
-p.style.fontSize = '100px';
-var logo = document.querySelector('#header-bottom-left')
-logo.appendChild(p)
+var logo = document.querySelector('#header-bottom-left');
+logo.appendChild(p);
 ```
 
 jQuery's API
 
 ```
 var newP = $('<p>Hello WDI!!!!!</p>');
-newP.css({
-	'float': 'left',
-	'background-color': 'red',
-	'font-size': '100px'
-});
 $('#header-bottom-left').append(newP);
 ```
 
----
-
 ###Challenge: Translate to jQuery
 
-#####Clone and insert a new button
+The JavaScript code sample below clones an existing button and inserts the new button into the DOM.  Use the jQuery API docs to translate this into jQuery.
+
+Hint: Take it a line at a time. Remember to look to Google or docs for any function names or terms you're not familiar with. 
+
 ```
 var btn = document.querySelectorAll(".spacer")[2];
 var newBtn = btn.cloneNode(true);
@@ -105,11 +98,11 @@ anchorChild.text = "Party like it's 1999";
 btn.appendChild(newBtn);
 ```
 
----
+
 
 ## [Events](http://api.jquery.com/category/events/)
 
-jQuery makes event handeling easy and consistent across browsers. Events such as `.click()`, `.mousedown()`, `.change()`, `.keydown()`, etc, simply take a function as a parameter. Otherwise use `.bind()` and specify the event and function.
+jQuery makes event handeling easy and consistent across browsers. Event handlers with event-type names such as `.click()`, `.mousedown()`, `.change()`, and so on take a function as a parameter. Generally, though, use `.bind()` and specify the event and function.
 
 ### Example: Hover and Click Events
 
@@ -120,7 +113,7 @@ allPosts
 .hover( function() {			//using the event as the function
     $(this).css({"background-color": "orange"});
 })
-.bind("click", function() {	//using bind and passing in an event
+.bind("click", function() {	//using bind and passing in an event (preferred)
 	var rank = $(this).find(".rank").text();
     alert("That's Rank: " + rank);
 })
@@ -128,10 +121,10 @@ allPosts
 
 ##[Animations](http://api.jquery.com/animate/)
 
-We can use `.animate()`, which takes an object and a time (in milliseconds) and will change the existing css to the one passed in that amount of time. See example below. 
+We can use `.animate()`, which takes an object representing a CSS style and a time (in milliseconds). The method then changes the existing CSS to the new style in the given amount of time. See example below. 
 
 ```
-// Good practice: Prepend $ to indicate that it's a jQuery object
+// Good practice: Start variable names with $ to indicate that the variables store jQuery objects
 var $allPosts = $('body #siteTable > div');
 
 // the first is the top post
@@ -154,14 +147,8 @@ $topPost.animate({ opacity: 0.25 }, 5000);
 ```
 
 
-
-
 ### Docs & Resources
 
 [You Might Not Need jQuery](http://youmightnotneedjquery.com/) shows the feature overlap among JavaScript and various JavaScript libraries -- with coded examples!
 
 [jQuery docs on DOM Manipulation](https://api.jquery.com/category/manipulation/)
-
-### Basic Challenges
-
-### Stretch Challenges
