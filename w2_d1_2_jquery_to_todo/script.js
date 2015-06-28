@@ -16,7 +16,7 @@ $(function() {
     $('#todos').append('<li class="item">' + listItem + '</li>');
   });
 
-  $(document).on('click', '.item', function() {
+  $('#todos').on('click', '.item', function() {
     $(this).addClass('done');
   });
 
