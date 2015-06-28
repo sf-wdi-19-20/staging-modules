@@ -62,7 +62,7 @@ Feel free to reference this morning's lesson!
 	```
 
 1. Add jQuery to your project with a CDN.  Also add Bootstrap's CSS.
-1. Why do we tend to add stylesheets in the <head> and javascripts at the end of the <body>? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
+1. Why do we tend to add stylesheets in the `<head>` and javascripts at the end of the `<body>`? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
 
 ##Element Creation
 
