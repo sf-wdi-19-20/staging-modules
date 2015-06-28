@@ -1,19 +1,12 @@
-#Title
-
-| set up a new web development project to use jQuery |  (Adam covers: CDN, but more towards refactoring)
-| change the contents and style of DOM elements using jQuery | (Adam covers)
-
-| add event listeners to DOM elements using jQuery | (Adam covers: click)
-[jQuery docs on Selectors](https://api.jquery.com/category/selectors/)
-
+#jQuery Continued
 
 | Objectives |
 | :--- |
 |  |
 | Students will be able to . . . |
 | set up a new web development project to use jQuery |
-| change the structure of the DOM using jQuery (wording?)| (append, remove)
-| gather user input from forms |  (submit)
+| change the structure of the DOM using jQuery | 
+| gather user input from forms |
 
 
 
@@ -52,17 +45,51 @@ Thinking of a restaurant: the menu is the API, ordering is executing an API call
 
 Feel free to reference this morning's lesson!
 
-1. Today we'll be working on a To Do List app. Start a project by creating a directory with the necessary files for your site.
+1. In class today we'll be working on a Shopping List app. Start a project by creating a directory with the necessary files for your site.
 	```
-	todo
+	shopping
 	├── README.md
 	├── index.html
 	├── script.js
 	└── style.css
 	```
 
-1. Add jQuery to your project with a CDN.  Also add Bootstrap's CSS.
+1. Add jQuery to your project with a CDN.  
+1. Add Bootstrap's CSS to your project, and create a `div` with class `container` to hold the page's content.
 1. Why do we tend to add stylesheets in the `<head>` and javascripts at the end of the `<body>`? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
+
+##Design
+
+Think about what your user needs. For a shopping list app, we'd like the user to be able to at least:
+	* add items to the list
+	* see the items that are currently on their list
+	* remove items from their list
+
+What does your user need to remember about each item on their list?
+	* the item name
+	* how many of the item they need
+
+A cool additional feature would be to let the user edit the shopping list items, in case, for instance, they need more or fewer of the item than they thought. 
+
+These requirements will help us design a *model* and *view* for our user's data.
+
+###View
+
+The view is just what your user sees. Based on the app's requirments, our view will need a list of items and a form to enter in new items. 
+
+	<div class="text-center">
+          <h1>To Do List</h1>
+          <hr>
+          <form id="new_todo">
+            <div class="form-group">
+              <input class="form-control" id="todo_text" placeholder="What do you need to do today?" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-success" value="Add New To Do">
+            </div>
+          </form>
+          <hr>
+        </div>
 
 ##Element Creation
 
