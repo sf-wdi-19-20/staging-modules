@@ -48,18 +48,25 @@ An *Application Programming Interface* is a set of predefined functions that can
 Thinking of a restaurant: the menu is the API, ordering is executing an API call, the food is your output.
 
 
-##Challenge: Project Setup
+###Challenge: Project Setup
 
 Feel free to reference this morning's lesson!
 
-1. Start a single-page project called "To Do". Create the necessary files for your site. 
-2. Add jQuery to your project with a CDN.  Also add Bootstrap.
-3. Why do we add stylesheets in the <head> and javascript at the end of the <body>? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
+1. Today we'll be working on a To Do List app. Start a project by creating a directory with the necessary files for your site.
+	```
+	todo
+	├── README.md
+	├── index.html
+	├── script.js
+	└── style.css
+	```
 
-# Demo & Learning Activities
-
+1. Add jQuery to your project with a CDN.  Also add Bootstrap's CSS.
+1. Why do we tend to add stylesheets in the <head> and javascripts at the end of the <body>? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
 
 ##Element Creation
+
+JavaScript gives us tools to change the contents and style of existing DOM elements. It also lets us change the structure of the DOM - adding and removing elements while the site is running.
 
 Standard DOM API
 
