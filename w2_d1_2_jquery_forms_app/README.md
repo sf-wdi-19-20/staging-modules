@@ -210,11 +210,12 @@ We can use `.animate()`, which takes an object representing a CSS style and a ti
 
 ##Challenges
 
-Goal: Instead of just storing the name of each item, store its quantity as well.  
-1. Think about the places where you'll have to make changes:
-	* the list item view will have to display the quantity
-	* the item input form will need another blank for the quantity
-	* the data model will have to include the quantity
+Goal: Instead of just storing the name of each item, store its quantity as well. 
+
+1. Think about the places where you'll have to make changes:    
+	* the list item view will have to display the quantity    
+	* the item input form will need another blank for the quantity    
+	* the data model will have to include the quantity    
 
 2. Change the hard coded list items in your HTML to display both the name and quantity. 
 3. Update the form to ask for a quantity.
