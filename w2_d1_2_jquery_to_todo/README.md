@@ -74,7 +74,8 @@ These requirements will help us design a *model* and *view* for our user's data.
 
 Based on the app's requirments, our view will need a list of items and a form to enter in new items.
 
-First, a form!
+First, a form!   
+
 	```
           <form id="new_shopping_item">
             <div class="form-group">
@@ -117,19 +118,33 @@ allPosts
 })
 ```
 
-###Challenge: Form Submission
-
+###Basic Challenges
+  
 1. Use jQuery to set up your `script.js` file so that your JavaScript will run after the DOM elements are loaded. 
-1. Write a jQuery selector that finds the form in your `index.html`. Save the form in a variable.
-1. Add a "submit" event handler to your form. The event handler should `console.log` the text the user entered into the form. Hint: this is the input element's `value`. Look up how to access it by searching "jQuery form value."
+
+Goal: Get form data upon submission.   
+1. Write a jQuery selector that finds the form in your `index.html`. Save the form in a variable. **Note: it's good practice to start variable names with $ to indicate that the variables store jQuery objects.**    
+1. Add a "submit" event handler to your form. The event handler should `console.log` the text the user entered into the form. Hint: this is the input element's `value`. Look up how to access it by searching "jQuery form value."   
+
+###Stretch Challenges
+
+Goal: Click items to mark them purchased.    
+1. Write a jQuery selector that finds the unordered list in your `index.html`. Save the unordered list in a varible.   
+1. We won't delete items yet, but let's give users a way to check items off. Add a "click" event handler to the unordered list that add the class "purchased" to each list item that is clicked.    
+	Hint: Reference the jQuery docs for [`on`](http://api.jquery.com/on/). You'll want to give the `on` method an event, a selector, and a handler instead of just an event and handler.    
+1. Create a custom style in your `style.css` to give a different appearnce to items with the "purchased" class.   
+
+
+**Why do we add one event handler to the whole list instead of adding one event handler for each element? Read about [event delegation](http://learn.jquery.com/events/event-delegation/).**
+
 
         
 ##Model  
 We want the user to be able to save a shopping list, so we have to model that list somehow and store the data somewhere. We'll talk more about modeling later, but for now just think of it as deciding what data structure(s) our JavaScript will use for each shopping list item and for the overall list.
 
-How would you model:
-	* a shopping list item?
-	* the whole shopping list?
+How would you model:   
+	* a shopping list item?   
+	* the whole shopping list?   
 
 ###Data Storage
 
@@ -165,8 +180,8 @@ $('#header-bottom-left').append(newP);
 ### Challenge
 
 1. Select the `ul` from your `index.html` and save it in a variable.
-2. Create a new `li` for each of the items in your shopping list data. Hint: use a loop or an iterator!
-3. Update the loop you wrote above so that it also appends each new list item to the `ul`. 
+2. Create a new `li` for the first item your shopping list data, and append the new list item to the `ul`. 
+
 
 
 ##Connect the Model and View!
@@ -186,15 +201,35 @@ We can use `.animate()`, which takes an object representing a CSS style and a ti
 	```
 	// Collapse a search bar
 	$("#search").animate({width: '100px'}, 5000)
-	
-	//Fade out...
-	$catImg.animate({ opacity: 0.25 }, 5000);
 	```
+	
+###Stretch Challenge: Animation
+
+1. Update your list click event handler to also fade out a list item to 0.5 opacity when it's clicked.
+
+
+##Challenges
+
+Goal: Instead of just storing the name of each item, store its quantity as well.  
+1. Think about the places where you'll have to make changes:
+	* the list item view will have to display the quantity
+	* the item input form will need another blank for the quantity
+	* the data model will have to include the quantity
+
+2. Change the hard coded list items in your HTML to display both the name and quantity. 
+3. Update the form to ask for a quantity.
+4. Update the form submit event handler to create list items that match the updated list item HTML.
+5. Change the data model to store both an item's name and its quantity. Hint: You'll probably need to change how you're storing each item. 
+
+
+Goal: When the page loads, display all of the starter items hard coded into your `scripts.js` file.     
+1. Create a new `li` for each of the items in your shopping list data. Hint: use a loop or an iterator!   
+2. Update the loop you wrote above so that it also appends each new list item to the `ul`.    
+3. Encapsulate your loop code in a function called `displayItems`. Call the function in your code.   
 
 
 
-
-### Docs & Resources
+##Docs & Resources
 
 [You Might Not Need jQuery](http://youmightnotneedjquery.com/) shows the feature overlap among JavaScript and various JavaScript libraries -- with coded examples!
 
