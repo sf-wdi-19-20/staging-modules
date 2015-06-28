@@ -8,8 +8,6 @@
 | change the structure of the DOM using jQuery | 
 | gather user input from forms |
 
-
-
 ## Motivation
 
 jQuery is a small, feature-rich JavaScript library. It makes things like DOM manipulation, event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers. It allows us to write expressive code and overcome browser compatibility issues in a way that is faster and more convenient than writing plain JavaScript. 
@@ -56,7 +54,7 @@ Feel free to reference this morning's lesson!
 
 1. Add jQuery to your project with a CDN.  
 1. Add Bootstrap's CSS to your project, and create a `div` with class `container` to hold the page's content.
-1. Why do we tend to add stylesheets in the `<head>` and javascripts at the end of the `<body>`? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
+1. Curious why we often add stylesheets in the `<head>` and scripts at the end of the `<body>`? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
 
 ##Design
 
@@ -67,29 +65,79 @@ Think about what your user needs. For a shopping list app, we'd like the user to
 
 What does your user need to remember about each item on their list?
 	* the item name
-	* how many of the item they need
 
-A cool additional feature would be to let the user edit the shopping list items, in case, for instance, they need more or fewer of the item than they thought. 
+A cool additional feature would be to let the user remember how many of each item they need. It'd also be nice to let the user edit the shopping list items, in case, for instance, they decide to change the item name to specify their favorite brand.
 
-These requirements will help us design a *model* and *view* for our user's data.
+These requirements will help us design a *model* and *view* for our user's data.  Today we'll be building our shopping list app from the outside in, so we'll start with the view.
 
 ###View
 
-The view is just what your user sees. Based on the app's requirments, our view will need a list of items and a form to enter in new items. 
+Based on the app's requirments, our view will need a list of items and a form to enter in new items.
 
-	<div class="text-center">
-          <h1>To Do List</h1>
-          <hr>
-          <form id="new_todo">
+First, a form!
+	```
+          <form id="new_shopping_item">
             <div class="form-group">
-              <input class="form-control" id="todo_text" placeholder="What do you need to do today?" autofocus>
+              <input class="form-control" id="shopping_text" placeholder="What do you need to get?" autofocus>
             </div>
             <div class="form-group">
-              <input type="submit" class="btn btn-success" value="Add New To Do">
+              <input type="submit" class="btn btn-success" value="Add New Shopping List Item">
             </div>
           </form>
-          <hr>
-        </div>
+        ```
+        
+Now, a list of shopping items.  We'll want to add and remove items *programatically* later, but for now let's *hard code* in some examples to get started on an HTML structure.
+
+	```
+        <ul id="shopping_list"></ul>
+          <li>Apples</li>
+          <li>Tea Bags</li>
+          <li>July BART pass</li>
+        </ul>
+        ```
+        
+Open your `index.html` in your browser to check your progress.
+        
+###Model  
+We want the user to be able to save a shopping list, so we have to model that list somehow. We'll talk more about modeling later, but for now just think of it as deciding what data structure(s) our JavaScript will use for each shopping list item and for the overall list.
+
+How would you model:
+	* a shopping list item?
+	* the whole shopping list?
+
+###Data Storage
+
+Now that we have these models, where do we actually store the user's shopping list data? 
+
+Eventually, we'll learn more advanced ways to store data. For now, we'll simply store our data in a JavaScript file.
+
+
+##jQuery [Events](http://api.jquery.com/category/events/) and Form Data
+
+jQuery makes event handeling easy and consistent across browsers. Event handlers with event-type names such as `.click()`, `.mousedown()`, `.change()`, and so on take a function as a parameter. Generally, though, we'll use `.bind()` and specify the event and function.
+
+### Example: Hover and Click Events
+
+```
+var allPosts = $("body #siteTable > div");
+allPosts
+.not(":first")
+.hover( function() {			//using the event as the function
+    $(this).css({"background-color": "orange"});
+})
+.bind("click", function() {	//using bind and passing in an event (preferred)
+	var rank = $(this).find(".rank").text();
+    alert("That's Rank: " + rank);
+})
+```
+
+###Challenge: Form Submission
+
+1. Use jQuery to set up your `script.js` file so that your JavaScript will run after the DOM elements are loaded. 
+1. Using the console, write a jQuery selector that finds the form in your `index.html`. Save the form in a variable in your console. Copy over your selector to your `script.js` file and save the form in a variable there too.
+1. 
+
+
 
 ##Element Creation
 
@@ -111,40 +159,7 @@ var newP = $('<p>Hello WDI!!!!!</p>');
 $('#header-bottom-left').append(newP);
 ```
 
-###Challenge: Translate to jQuery
 
-The JavaScript code sample below clones an existing button and inserts the new button into the DOM.  Use the jQuery API docs to translate this into jQuery.
-
-Hint: Take it a line at a time. Remember to look to Google or docs for any function names or terms you're not familiar with. 
-
-```
-var btn = document.querySelectorAll(".spacer")[2];
-var newBtn = btn.cloneNode(true);
-var anchorChild = newBtn.children[0].children[0].children[0];
-anchorChild.text = "Party like it's 1999";
-btn.appendChild(newBtn);
-```
-
-
-
-## [Events](http://api.jquery.com/category/events/)
-
-jQuery makes event handeling easy and consistent across browsers. Event handlers with event-type names such as `.click()`, `.mousedown()`, `.change()`, and so on take a function as a parameter. Generally, though, use `.bind()` and specify the event and function.
-
-### Example: Hover and Click Events
-
-```
-var allPosts = $("body #siteTable > div");
-allPosts
-.not(":first")
-.hover( function() {			//using the event as the function
-    $(this).css({"background-color": "orange"});
-})
-.bind("click", function() {	//using bind and passing in an event (preferred)
-	var rank = $(this).find(".rank").text();
-    alert("That's Rank: " + rank);
-})
-```
 
 ##[Animations](http://api.jquery.com/animate/)
 
