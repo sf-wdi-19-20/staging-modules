@@ -90,31 +90,17 @@ Now, a list of shopping items.  We'll want to add and remove items *programatica
 
 	```
         <ul id="shopping_list"></ul>
-          <li>Apples</li>
-          <li>Tea Bags</li>
-          <li>July BART pass</li>
+          <li class="item">Apples</li>
+          <li class="item">Tea Bags</li>
+          <li class="item">July BART pass</li>
         </ul>
         ```
         
 Open your `index.html` in your browser to check your progress.
-        
-###Model  
-We want the user to be able to save a shopping list, so we have to model that list somehow. We'll talk more about modeling later, but for now just think of it as deciding what data structure(s) our JavaScript will use for each shopping list item and for the overall list.
-
-How would you model:
-	* a shopping list item?
-	* the whole shopping list?
-
-###Data Storage
-
-Now that we have these models, where do we actually store the user's shopping list data? 
-
-Eventually, we'll learn more advanced ways to store data. For now, we'll simply store our data in a JavaScript file.
-
 
 ##jQuery [Events](http://api.jquery.com/category/events/) and Form Data
 
-jQuery makes event handeling easy and consistent across browsers. Event handlers with event-type names such as `.click()`, `.mousedown()`, `.change()`, and so on take a function as a parameter. Generally, though, we'll use `.bind()` and specify the event and function.
+jQuery makes event handeling easy and consistent across browsers. Event handlers with event-type names such as `.click()`, `.mousedown()`, `.change()`, and so on take a function as a parameter. Generally, though, we'll use `.on()` and specify the event and function.
 
 ### Example: Hover and Click Events
 
@@ -125,7 +111,7 @@ allPosts
 .hover( function() {			//using the event as the function
     $(this).css({"background-color": "orange"});
 })
-.bind("click", function() {	//using bind and passing in an event (preferred)
+.on("click", function() {	//using on method and passing in an event (preferred)
 	var rank = $(this).find(".rank").text();
     alert("That's Rank: " + rank);
 })
@@ -134,14 +120,31 @@ allPosts
 ###Challenge: Form Submission
 
 1. Use jQuery to set up your `script.js` file so that your JavaScript will run after the DOM elements are loaded. 
-1. Using the console, write a jQuery selector that finds the form in your `index.html`. Save the form in a variable in your console. Copy over your selector to your `script.js` file and save the form in a variable there too.
-1. 
+1. Write a jQuery selector that finds the form in your `index.html`. Save the form in a variable.
+1. Add a "submit" event handler to your form. The event handler should `console.log` the text the user entered into the form. Hint: this is the input element's `value`. Look up how to access it by searching "jQuery form value."
 
+        
+##Model  
+We want the user to be able to save a shopping list, so we have to model that list somehow and store the data somewhere. We'll talk more about modeling later, but for now just think of it as deciding what data structure(s) our JavaScript will use for each shopping list item and for the overall list.
 
+How would you model:
+	* a shopping list item?
+	* the whole shopping list?
+
+###Data Storage
+
+Now that we have these models, where do we actually store the user's shopping list data? 
+
+Eventually, we'll learn more advanced ways to store data. For now, we'll simply store our data in our `script.js` file.
+
+###Challenge
+
+1. Hard code three shopping list items into a data structure in your `script.js` file.
+	
 
 ##Element Creation
 
-JavaScript gives us tools to change the contents and style of existing DOM elements. It also lets us change the structure of the DOM - adding and removing elements while the site is running. Of course, jQuery gives us a way to do this too. What do the code samples below do?
+We've seen that JavaScript gives us tools to change the contents and style of existing DOM elements. It also lets us change the structure of the DOM - adding and removing elements while the site is running. Of course, jQuery gives us a way to do this too. What do the code samples below do?
 
 Standard DOM API
 
@@ -159,34 +162,36 @@ var newP = $('<p>Hello WDI!!!!!</p>');
 $('#header-bottom-left').append(newP);
 ```
 
+### Challenge
+
+1. Select the `ul` from your `index.html` and save it in a variable.
+2. Create a new `li` for each of the items in your shopping list data. Hint: use a loop or an iterator!
+3. Update the loop you wrote above so that it also appends each new list item to the `ul`. 
+
+
+##Connect the Model and View!
+
+We can get user's data in through the form. We can display the data we have saved in our JavaScript file. Let's connect the two. 
+
+###Challenge
+
+1. Update your form's submit event handler to add new shopping list items into your array of shopping list items instead of just `console.log`ing them. 
+2. Update your form's submit event handler to add the new shopping list items to the view by making `li`s for them and appending them to the `ul`.
 
 
 ##[Animations](http://api.jquery.com/animate/)
 
 We can use `.animate()`, which takes an object representing a CSS style and a time (in milliseconds). The method then changes the existing CSS to the new style in the given amount of time. See example below. 
 
-```
-// Good practice: Start variable names with $ to indicate that the variables store jQuery objects
-var $allPosts = $('body #siteTable > div');
+	```
+	// Collapse a search bar
+	$("#search").animate({width: '100px'}, 5000)
+	
+	//Fade out...
+	$catImg.animate({ opacity: 0.25 }, 5000);
+	```
 
-// the first is the top post
-var $topPost = $allPosts.first();
 
-// Let's find the rank
-$topPost.find('.rank').text();
-
-// & the title
-$topPost.find('.title').text();
-
-// Change it!
-$topPost.find('.title').text('WDI students are pretty awesome');
-
-// Collapse the search bar
-$("#search").animate({width: '100px'}, 5000)
-
-//Fade out...
-$topPost.animate({ opacity: 0.25 }, 5000);
-```
 
 
 ### Docs & Resources
