@@ -17,7 +17,7 @@ Bootstrap is virtually universal today and its JS components simplify many commo
 
 ### Basic Challenges
 
-1. Create a new project called `bootstrap-js` and fire up bootstrap.
+1. Create a new project called `bootstrap-js` and create a project with bootstrap.
 2. Add a navbar, a jumbotron with a container containing a header 1 welcome message, and below that another container
 2. Add the bootstrap tabs component below the jumbotron
 4. In one of the tabs, like an article in a news site, at some text to a box, and a link called 'more' that uncollapses and collapses some lorem ipsum text in it.

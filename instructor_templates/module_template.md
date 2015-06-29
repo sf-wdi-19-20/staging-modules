@@ -1,4 +1,7 @@
 #Title
+* Concepts:
+* Tools:
+* Activities:
 
 | Objectives |
 | :--- |
@@ -8,8 +11,6 @@
 ### Motivation (Why?)
 
 ### Analogy (What?)
-
-### Setup (How?)
 
 # Demo & Learning Activities
 

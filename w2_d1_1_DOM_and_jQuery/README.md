@@ -4,6 +4,8 @@
 | :--- |
 |  |
 | Use the JS library "jQuery" to select and manipulate DOM elements. |
+| Describe an explain the importance and risks of using external libraries to accelerate coding. |
+| Pair program. |
 
 #BUT FIRST!
 
@@ -18,13 +20,11 @@ jQuery is a very, very popular client-side library. It greatly simplifies:
 
 ### Analogy (What?)
 
-Shortcut
+External libraries or modules like jQuery are like:
 
-Libraries & Modules
-
-Standing on the shoulders of giants
-
-Levels of abstraction. Letters, Syllables, Words, Phrases, Sentences, Paragraphs, Books
+* Shortcuts
+* Standing on the shoulders of giants
+* Letters, Syllables, Words, Phrases, Sentences, Paragraphs, Books
 
 # Challenges
 
