@@ -1,66 +1,30 @@
 #board {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .box {
   border: 1px solid black;
+  cursor: pointer;
+  font-size: 50px;
   height: 150px;
+  padding: 38px 0;
 }
 
 .X {
-  background-color: #81F7F3;
+  color: #f2183d;
 }
 
 .O {
-  background-color: #81F781;
+  color: #4ecdc4;
 }
 
-
-.title {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+.btn-danger {
+  background-color: #f2183d;
+  border-color: #f2183d;
 }
 
-.players {
-  position: relative;
-  display: inline-block;
-  left: 2em;
-}
-
-.reset {
-  position: absolute;
-  display: inline-block;
-  top: 2em;
-  right: 3em;
-}
-
-.square {
-  display: inline-block;
-  border: 3px solid black;
-  width: 10em;
-  height: 10em;
-  margin-bottom: 1px;
-}
-
-.win {
-  display: inline-block;
-  border: 3px solid yellow;
-  width: 10em;
-  height: 10em;
-  margin-bottom: 1px;
-}
-
-/* display: table-cell is required in order to use vertical-align
- This allows for an X or O perfectly centered in the p element */
-.blank {
-  display: table-cell;
-  /* inherit setting from parent element's class */
-  width: inherit;
-  height: inherit;
-  font-size: 16px;
-  text-align: center;
-  vertical-align: middle;
-  /*background-color: #D8D8D8;*/
+.btn-danger:hover {
+  background-color: #4ecdc4;
+  border-color: #4ecdc4;
 }

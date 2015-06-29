@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>To Do List</title>
+  <title>Shopping List</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -19,19 +19,23 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="text-center">
-          <h1>To Do List</h1>
+          <h1>Shopping List</h1>
           <hr>
-          <form id="new_todo">
+          <form id="new_shopping_item">
             <div class="form-group">
-              <input class="form-control" id="todo_text" placeholder="What do you need to do today?" autofocus>
+              <input class="form-control" id="item_name" placeholder="What do you need to get?" autofocus>
             </div>
             <div class="form-group">
-              <input type="submit" class="btn btn-success" value="Add New To Do">
+              <input type="submit" class="btn btn-success" value="Add to list!">
             </div>
           </form>
           <hr>
         </div>
-        <ul id="todos"></ul>
+        <ul id="shopping_list">
+          <li class="item">Apples</li>
+          <li class="item">Tea Bags</li>
+          <li class="item">July BART pass</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -39,7 +43,7 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-  <!-- Latest compiled and minified JavaScript -->
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- custom script -->
