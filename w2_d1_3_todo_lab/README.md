@@ -1,3 +1,5 @@
+
+
 #To Do Lab
 
 Objective: Build a to do app using HTML, CSS, and JavaScript with jQuery.
@@ -43,15 +45,21 @@ Consider using the JavaScript [Date](https://developer.mozilla.org/en-US/docs/We
 1. Instead of crossing off tasks when clicked, remove the task from the view and the model.
 1. Building off part 1, add a delete button to each task. Update your code so that the task is only deleted when the button is clicked.
 
-**Goal: Edit Tasks**
+**Goal: Input Validation**
 
-1. Create a form to edit tasks. Add the form to each task's `li`.
-1. Add an edit button to each task display, and style the form so that it *toggles* when the edit button is clicked. Hint: search "jQuery toggle form display."
-1. Use the form data to update the task in the view and the model.
+1. Add a check for empty form inputs. If a task's title or description is empty, don't add it to the page.
+
+1. Give the user some feedback if their task is rejected because of an empty input field. Consider using a [Bootstrap Alert](http://getbootstrap.com/components/#alerts).
 
 **Goal: Styling / Branding**
 
 1. Add nicer styling to your page to make it more attractive to users. Get as creative as you want!  
+
+**Super Stretch Goal: Edit Tasks**
+
+1. Create a form to edit tasks. Add the form to each task's `li`.
+1. Add an edit button to each task display, and style the form so that it *toggles* when the edit button is clicked. Hint: search "jQuery toggle form display."
+1. Use the form data to update the task in the view and the model.
 
 ##Workflow & Submission
 
@@ -59,7 +67,7 @@ Consider using the JavaScript [Date](https://developer.mozilla.org/en-US/docs/We
   (a) Fork this repository, and clone it onto your local computer, OR
 	(b) Create a repo for the To Do app on your local computer.
 
-1. Meet the minimum requirements listed above. Use the [module notes]() as a reference.  
+1. Meet the minimum requirements listed above. Use the [module notes]() as a reference.
 
 1. Push your To Do app to a remote repo on your GitHub account.
 
