@@ -132,19 +132,20 @@ $allLis
 ###Basic Challenges
 
 Capture the form data the user submits.
+
 1. Use jQuery to set up your `script.js` file so that your JavaScript will run after the DOM elements are loaded.
 
-1. Write a jQuery selector that finds the form in your `index.html`. Save the form in a variable. **Note: it's good practice to start variable names with $ when the variables store jQuery objects.**
+2. Write a jQuery selector that finds the form in your `index.html`. Save the form in a variable. **Note: it's good practice to start variable names with $ when the variables store jQuery objects.**
 
-1. Add a "submit" event handler to your form. The event handler should `console.log` the text the user entered into the form. Hint: this is the input element's `value`. Look up how to access it by searching "jQuery form value."  Hint: Remember to prevent the default submit behavior!
+3. Add a "submit" event handler to your form. The event handler should `console.log` the text the user entered into the form. Hint: this is the input element's `value`. Look up how to access it by searching "jQuery form value."  Hint: Remember to prevent the default submit behavior!
 
 ###Stretch Challenges
  Click tasks to mark them as done.
 1. Write a jQuery selector that finds the unordered list in your `index.html`. Save the unordered list in a variable.
 
-1. Add a "click" event handler to the unordered list that add the class "done" to a task's list item when that task is clicked.
+2. Add a "click" event handler to the unordered list that add the class "done" to a task's list item when that task is clicked.
 
-1. Create a custom style in your `style.css` to give a different appearance to items with the "done" class.
+3. Create a custom style in your `style.css` to give a different appearance to items with the "done" class.
 
 
 **Why do we add one event handler to the whole list instead of adding one event handler for each element? Read about [event delegation](http://learn.jquery.com/events/event-delegation/).**
