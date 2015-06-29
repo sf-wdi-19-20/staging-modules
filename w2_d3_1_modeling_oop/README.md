@@ -71,6 +71,40 @@ Convention:  `Array.prototype.sort = Array.prototype.sort || mySort;`
 4. Create a `drive` method for the Car object. 
 
 
-##JavaScript Object Notation and `window.localStorage`.
+##JavaScript Object Notation
+
+So how do we use objects?  Well, beyond modeling we sometimes want to store these things or send them across the internet. For these purposes, we'll often use JSON (JavaScript Object Notation), which just converts all kinds of JavaScript objects to text.  We have a method called `JSON.stringify` to do this automatically!
+
+What does JSON get us right now today?
+
+Our first opportunity for **persistent** data!
+
+##LocalStorage
+
+`window.localStorage` is a persistent object the browser already has set up for us. Open your developer tools and take a look at your localStorage. 
+
+Try storing an array in localStorage:
+
+`localStorage.testArr = [2,3,4,5];`
+
+Now check what `localStorage.testArr` is.  Like other JavaScript objects, localStorage has keys that are strings. BUT! localStorage also converts all values to strings, which can destroy some of our data.  Let's try again using the JSON.stringify method first:
+
+`localStorage.testArr = JSON.stringify([2,3,4,5]);`
+
+What is `localStorage.testArr` now?
+
+We're getting closer to keeping our original array. All we need to do is `JSON.parse` the stored object string to turn it back into JavaScript.
+
+What about functions?
+
+We can't store functions in localStorage, so we'll have to create new instances of objects programmatically from localStorage when we start up the site. 
+
+##Later this afternoon:
+
+Modeling relationships
+More on localStorage
+
+
+
 
 
