@@ -1,5 +1,3 @@
-
-
 #To Do Lab
 
 Objective: Build a to do app using HTML, CSS, and JavaScript with jQuery.

@@ -155,7 +155,7 @@ Click tasks to mark them as done.
 
 
 ##Model  
-We want the user to be able to save a shopping list, so we have to model that list somehow and store the data somewhere. We'll talk about modeling more later, but for now just think of it as deciding what data structure(s) our JavaScript will use for each shopping list item and for the overall list.
+We want the user to be able to save a shopping list, so we have to model that list somehow and store the data somewhere. 
 
 How would you model:
 * a shopping list item?
