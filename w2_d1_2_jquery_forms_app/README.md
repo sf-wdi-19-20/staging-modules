@@ -83,10 +83,10 @@ First, a form!
 ```
 <form id="new_shopping_item">
   <div class="form-group">
-    <input class="form-control" id="shopping_text" placeholder="What do you need to get?" autofocus>
+    <input class="form-control" id="item_name" placeholder="What do you need to get?" autofocus>
   </div>
   <div class="form-group">
-    <input type="submit" class="btn btn-success" value="Add New Shopping List Item">
+    <input type="submit" class="btn btn-success" value="Add to List!">
   </div>
 </form>
 ```
@@ -220,7 +220,7 @@ We can use `.animate()`, which takes an object representing a CSS style and a ti
 
 ###Stretch Challenge: Animation
 
-1. Update your list click event handler to also fade out a list item to 0.5 opacity when it's clicked.
+1. Update your list click event handler to also fade out a list item to 0.5 opacity over 1 second when it's clicked.
 
 ##Docs & Resources
 
