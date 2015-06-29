@@ -139,8 +139,10 @@ Capture the form data the user submits.
 
 3. Add a "submit" event handler to your form. The event handler should `console.log` the text the user entered into the form. Hint: this is the input element's `value`. Look up how to access it by searching "jQuery form value."  Hint: Remember to prevent the default submit behavior!
 
-###Stretch Challenges
- Click tasks to mark them as done.
+### Stretch Challenges
+
+Click tasks to mark them as done.
+
 1. Write a jQuery selector that finds the unordered list in your `index.html`. Save the unordered list in a variable.
 
 2. Add a "click" event handler to the unordered list that add the class "done" to a task's list item when that task is clicked.
