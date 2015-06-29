@@ -52,8 +52,9 @@ In class today we'll be looking at a Shopping List app. This afternoon and tonig
 	└── style.css
 	```
 
+1. Add Bootstrap's CSS to your project, and create a `div` with class `container` to hold the page's content. You can start with the [Bootstrap boilerplate](https://github.com/sf-wdi-19-20/modules/blob/master/w1_d2_2_bootstrap_css/bootstrap_boilerplate/index.html), but edit it to only contain one content column.  We'll use a class `col-md-offset-3` to center the column.
+
 1. Add jQuery to your project with a CDN.  
-1. Add Bootstrap's CSS to your project, and create a `div` with class `container` to hold the page's content.
 
 ###Stretch Challenge
 1. Curious why we often add stylesheets in the `<head>` and scripts at the end of the `<body>`? See [Yahoo's Performance Rules](https://developer.yahoo.com/performance/rules.html).
