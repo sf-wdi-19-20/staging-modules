@@ -56,11 +56,11 @@ Consider using the JavaScript [Date](https://developer.mozilla.org/en-US/docs/We
 ##Workflow & Submission
 
 1. You may choose to start on this project in two ways. Either:
-  a) Fork this repository, and clone it onto your local computer, OR
-	b) Create a repo for the To Do app on your local computer.
+  (a) Fork this repository, and clone it onto your local computer, OR
+	(b) Create a repo for the To Do app on your local computer.
 
 1. Meet the minimum requirements listed above. Use the [module notes]() as a reference.  
 
 1. Push your To Do app to a remote repo on your GitHub account.
 
-1. Submit the link to you To Do app repo in the [homework submission form](), along with any questions or comments from the pre-reading.
+1. Submit the link to your To Do app repo in the [homework submission form](), along with any questions or comments from the pre-reading.
