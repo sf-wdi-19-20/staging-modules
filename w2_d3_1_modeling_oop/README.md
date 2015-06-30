@@ -42,6 +42,29 @@ behaviors <--> methods (functions)
 * data is "embedded" in each instance
 
 
+```
+function Person (name, realAge, feelsOld){
+  this.name = name; 
+  
+  var realAge = realAge;  // this variable will be "private", not accessible
+  
+  this.getAge = function(realAge, feelsOld){
+    if (feelsOld){
+     return realAge - 10
+    } else {
+     return realAge;
+    }
+  }
+}
+
+var grandpa = new Person("Jim", 72, true);
+
+console.log(grandpa.realAge);  // undefined
+
+console.log(grandpa.getAge());  // 62 :D
+```
+
+
 **Prototypes**
  
 * all instances share the same function and variable declarations
@@ -50,25 +73,34 @@ behaviors <--> methods (functions)
 
 Convention:  `Array.prototype.sort = Array.prototype.sort || mySort;`
 
-##Challenges
+**Instance variables and functions**
 
-*Note to teaching team:  here's a chart of what the challenges will cover:*
+* adds variable or function directly to the instance
+* overwrites constructor properties/methods by replacing them
+* overwrites prototype properties/methods by being earlier on the lookup chain!
+
+
+##Modeling with Constructors, Prototypes, Instances
 
 | Place | How it Works | Attribute Example | Method Example |
 | :-- | :--- | :--- | :--- |
-| constructor | each instance gets a copy at creation | often passed in (name) | access "private" variables |
-| prototype | all instances share a lookup copy | commonalities (numWheels on car) | same behavior across instances |
-| instance | only one copy, for this instance (or overwrites) | singularities (secretCode with a sibling) | interpretSecretCode |
+| constructor | common, each instance gets a copy at creation | usually passed in (name), sometimes calculated | rare, can access "private" variables |
+| prototype | all instances share a lookup copy | commonalities (numWheels on car), or shared data (inventoryID) | common, same behavior across instances |
+| instance | only one copy, for this instance | singularities (secretCode with a sibling) | interpretSecretCode |
 
-
+##Challenges
 
 1. Work with your table to list important attributes and methods for a Car object type.
 
-2. Create a constructor for the Car object type.
+1. Create a constructor for the Car object type.
 
-3. Create a "private" `_price` variable for the Car object.  Create a getter method and a setter for the `_price` property.
+1. Create a "private" `_markup` variable for the Car object type (don't want customers to see this!).  
 
-4. Create a `drive` method for the Car object. 
+1. Create a getter method and a setter for the `_markup` variable.  Should these methods be on the constructor or the prototype?
+
+1. Create a "public" (normal) `location` attribute for the Car object type.
+
+1. Create a `drive` method for the Car object. Should this be on the constructor or the prototype?
 
 
 ##JavaScript Object Notation
@@ -99,10 +131,40 @@ We're getting closer to keeping our original array. All we need to do is `JSON.p
 
 We can't store functions in localStorage, so we'll have to create new instances of objects programmatically from localStorage when we start up the site. 
 
-##Later this afternoon:
+##Later this afternoon: Modeling relationships
 
-Modeling relationships
-More on localStorage
+```
+function Person (first_name, last_name, money){
+  this.first_name = first_name;
+  this.last_name = last_name; 
+  
+  this.money = money;
+  this.stuff = [];
+  
+}
+
+Person.prototype.buyStuff = function(newStuff, cost){
+ this.money = this.money - cost;
+ this.stuff.push(newStuff);
+}
+```
+
+```
+function CellPhone(make, model, price){
+ this.make = make;
+ this.model = model;
+ this.price = price;
+}
+```
+
+```
+var gal = new Person("Annie", "Oakley", 828);
+
+var iPhone6 = new CellPhone("iPhone", "6", 649.99);
+
+guy.buyStuff(iPhone6);
+
+```
 
 
 
