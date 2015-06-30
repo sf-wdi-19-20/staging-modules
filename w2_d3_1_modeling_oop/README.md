@@ -8,6 +8,7 @@
 | summarize key tenants of the Object Oriented Programming paradigm |
 | model real-world data and relationships with JavaScript objects |
 | justify choices of which methods and attributes to include, and whether to put them on a constructor, a prototype, or a single object |
+| use localStorage to store persistent data in a JSON format |
 
 ##Programming Paradigms
 
@@ -47,18 +48,17 @@ behaviors <--> methods (functions)
 * when you update the prototype, previously created instances DO get the updates
 * data is "referenced" from the prototype copy
 
-
 Convention:  `Array.prototype.sort = Array.prototype.sort || mySort;`
 
 ##Challenges
 
 *Note to teaching team:  here's a chart of what the challenges will cover:*
 
-| Place | Attribute | Method |
-| :--- | :--- | :--- |
-| constructor: each instance gets a copy at creation | often passed in (name) | access "private" variables |
-| prototype: all instances share a lookup copy | commonalities (numWheels on car) | same behavior across instances |
-| instance: only one copy, for this instance | singularities (secretCode with a sibling) | interpretSecretCode |
+| Place | How it Works | Attribute Example | Method Example |
+| :-- | :--- | :--- | :--- |
+| constructor | each instance gets a copy at creation | often passed in (name) | access "private" variables |
+| prototype | all instances share a lookup copy | commonalities (numWheels on car) | same behavior across instances |
+| instance | only one copy, for this instance (or overwrites) | singularities (secretCode with a sibling) | interpretSecretCode |
 
 
 
@@ -73,7 +73,7 @@ Convention:  `Array.prototype.sort = Array.prototype.sort || mySort;`
 
 ##JavaScript Object Notation
 
-So how do we use objects?  Well, beyond modeling we sometimes want to store these things or send them across the internet. For these purposes, we'll often use JSON (JavaScript Object Notation), which just converts all kinds of JavaScript objects to text.  We have a method called `JSON.stringify` to do this automatically!
+Beyond modeling with objects, we sometimes want to store data in objects or send them across the internet. For these purposes, we'll often use JSON (JavaScript Object Notation), which is a standard text representation of JavaScript Objects.  We have a method called `JSON.stringify` to automatically convert JavaScript objects into a JSON string!
 
 What does JSON get us right now today?
 
@@ -81,13 +81,13 @@ Our first opportunity for **persistent** data!
 
 ##LocalStorage
 
-`window.localStorage` is a persistent object the browser already has set up for us. Open your developer tools and take a look at your localStorage. 
+`window.localStorage` is a persistent object the browser already has set up for us. Open your developer tools and take a look at your localStorage. (Note: the browser lets us access `window.localStorage` by just typing `localStorage`.)
 
 Try storing an array in localStorage:
 
 `localStorage.testArr = [2,3,4,5];`
 
-Now check what `localStorage.testArr` is.  Like other JavaScript objects, localStorage has keys that are strings. BUT! localStorage also converts all values to strings, which can destroy some of our data.  Let's try again using the JSON.stringify method first:
+Now check what `localStorage.testArr` is.  Like other JavaScript objects, localStorage has keys that are strings. BUT! localStorage also converts all values to strings, which can be bad for some of our data.  Let's try again using the JSON.stringify method first:
 
 `localStorage.testArr = JSON.stringify([2,3,4,5]);`
 
@@ -95,7 +95,7 @@ What is `localStorage.testArr` now?
 
 We're getting closer to keeping our original array. All we need to do is `JSON.parse` the stored object string to turn it back into JavaScript.
 
-What about functions?
+**What about functions?**
 
 We can't store functions in localStorage, so we'll have to create new instances of objects programmatically from localStorage when we start up the site. 
 
