@@ -1,24 +1,25 @@
 $(function() {
 
   var toDos = [];
+  var $newTodo = $('#new-todo');
+  var $todoText = $('#todo-text');
+  var $toDoList = $('#todo-list');
 
-  var $toDoList = $('#todos');
-
-  $('#new_todo').on('submit', function(event) {
+  $newTodo.on('submit', function(event) {
     event.preventDefault();
-    var listItem = $('#todo_text').val();
+    var newTodoText = $todoText.val();
 
     // store our new to do
-    toDos.push(listItem);
+    toDos.push(newTodoText);
 
     // clear the form
-    $('#todo_text').val("");
+    $todoText.val("");
 
     // append our new to do to the page
-    $toDoList.append('<li class="item">' + listItem + '</li>');
+    $toDoList.append('<li class="todo">' + newTodoText + '</li>');
   });
 
-  $toDoList.on('click', '.item', function() {
+  $toDoList.on('click', '.todo', function() {
     $(this).addClass('done');
   });
 

@@ -1,5 +1,8 @@
+body {
+  font-size: 16px;
+}
 
-.item:hover, .item.done {
+.todo:hover, .todo.done {
   cursor: pointer;
   text-decoration: line-through;
 }
