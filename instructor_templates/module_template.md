@@ -1,12 +1,12 @@
 #Title
-* Concepts:
-* Tools:
-* Activities:
 
 | Objectives |
 | :--- |
-|  |
 | Students will be able to . . . |
+
+| Concepts | Tools | Activities |
+| :---: | :---: | :---: |
+|  | | Challenges |
 
 ### Motivation (Why?)
 

@@ -1,16 +1,16 @@
 #Intro to Express
-* Concepts: Packages, MVC
-* Tools:  NPM, Express
-* Activities: Challenges
 
 | Objectives |
 | :--- |
-|  |
-| Students will be able to . . . |
+| Initialize an Express app. |
+
+| Concepts | Tools | Activities |
+| :---: | :---: | :---: |
+| Packages, MVC | NPM, Express | Challenges |
 
 ### Motivation (Why?)
 
-0. Cutting edge web architecture - Client-side architecture with a JSON API server.
+0. A Client-side architecture with a Node JSON API server is the cutting edge of web technology.
 1. DRY code
 2. Segregation of Duties/Separation of Concerns
 
@@ -41,13 +41,13 @@ A web server is like a restaurant. The views are the menu. The controllers are t
 
 ### Basic Challenges
 
-1. Install Node & npm
-2. Install and start an express app in a new directory
-3. Show "Hello World!" on the root url of an express app.
-4. Show a JSON array of user objects (hint: use `res.json(users)` where `users` is an array of objects.
+1. Install Node & npm & nodemon
+2. Install and start an express app in a new directory (see Docs & Resources above)
+3. Show "Hello World!" on the root url of an express app. (hint: use `res.send(string)`)
+4. Show a JSON array of user objects at `/users` (hint: use `res.json(users)` where `users` is an array of objects.
 
 ### Stretch Challenges
 
-1.
-2.
-3.
+1. Show a JSON array of user objects at `/books` (hint: use `res.json(books)` where `books` is an array of objects.
+2. Show a JSON array of user objects at `/users` where each user has some books (hint: make an array of users with an attribute called `books` that is an array of books.)
+3. Use the [express generator](http://expressjs.com/starter/generator.html) to start an express app. . . *drop the mic
