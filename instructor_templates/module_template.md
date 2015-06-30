@@ -12,7 +12,7 @@
 
 ### Analogy (What?)
 
-# Demo & Learning Activities
+# Examples & Key Take Aways
 
 #Challenges
 
