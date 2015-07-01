@@ -147,7 +147,7 @@ $form.on("submit", function(event){
       make: $makeInput.val(), 
       model: $modelInput.val(),
       price: $priceInput.val(),
-      sold: false
+      sold: false 
   }
   // push into array
 
