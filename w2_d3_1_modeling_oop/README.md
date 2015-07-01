@@ -45,6 +45,10 @@ JavaScript doesn't have classes (yet). We can instead think of "object types" or
 
 Objects created with the `new` keyword are cloned "instances" of the "object type" of the constructor.
 
+###Composition
+
+Object types are built up or composed of other data types, including objects. 
+
 ###Delegation
 
 Basically, "delegating" tasks to another part of the program. In JS, think of **prototype chain** lookup.
@@ -52,6 +56,7 @@ Basically, "delegating" tasks to another part of the program. In JS, think of **
 ###Inheritance 
 
 Basically, letting objects by "a kind of" other objects. The process by which, for example, we can easily create both `Employee` and `Student` object types starting from the features of a base `Person` object type. Tomorrow!
+
 
 ###Encapsulation
 
