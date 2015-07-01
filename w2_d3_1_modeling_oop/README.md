@@ -48,8 +48,8 @@ function Person (name, realAge, feelsOld){
   
   var realAge = realAge;  // this variable will be "private", not accessible
   
-  this.getAge = function(realAge, feelsOld){
-    if (feelsOld){
+  this.getAge = function(){
+    if (this.feelsOld){
      return realAge - 10
     } else {
      return realAge;
