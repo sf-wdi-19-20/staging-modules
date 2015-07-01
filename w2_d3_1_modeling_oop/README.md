@@ -45,9 +45,10 @@ behaviors <--> methods (functions)
 ```
 function Person (name, realAge, feelsOld){
   this.name = name; 
-  
+  this.feelsOld = feelsOld;
+
   var realAge = realAge;  // this variable will be "private", not accessible
-  
+
   this.getAge = function(){
     if (this.feelsOld){
      return realAge - 10
@@ -59,9 +60,9 @@ function Person (name, realAge, feelsOld){
 
 var grandpa = new Person("Jim", 72, true);
 
-console.log(grandpa.realAge);  // undefined
+console.log("real age: ", grandpa.realAge);  // undefined
 
-console.log(grandpa.getAge());  // 62 :D
+console.log("'age': ",grandpa.getAge());  // 62 :D
 ```
 
 
