@@ -5,15 +5,20 @@
 | Objectives: students will be able to . . . |
 | :--- |
 |  |
-| summarize key tenants of the Object Oriented Programming paradigm |
+| summarize key features of the Object Oriented Programming paradigm |
 | model real-world data and relationships with JavaScript objects |
 | justify choices of which methods and attributes to include, and whether to put them on a constructor, a prototype, or a single object |
-| use localStorage to store persistent data in a JSON format |
+
+<!--| use localStorage to store persistent data in a JSON format |-->
 
 ##Programming Paradigms
 
-So far, we've been working with **procedural programming**, putting blocks of code in functions (aka procedures) that we call at various points in the program.
+<!--
+![XKCD goto](https://imgs.xkcd.com/comics/goto.png)    
+*Dev culture reference: 'goto considered harmful.' Google it LATER.*
+-->
 
+We've been working with **procedural programming**, putting blocks of code in functions (aka procedures) that we call at various points in the code. 
 
 ```
 data <--> global or local variables
@@ -23,13 +28,59 @@ behaviors <--> procedures  (functions)
 ```
 
 
-With **object oriented programming**, we encapsulate data and behaviors in objects.  
+With **object oriented programming**, we organize data and behaviors in objects.  
 
 ```
 data <--> attributes  ("class" or "instance" variables)
 
 behaviors <--> methods (functions)
 
+```
+
+##OOP features
+
+###Classes and Instances
+
+JavaScript doesn't have classes (yet). We can instead think of "object types" or "kinds of objects" that are defined by the combination of (1) a constructor function (like `Array()`) and (2) the constructor function's prototype (`Array.prototype`).
+
+Objects created with the `new` keyword are cloned "instances" of the "object type" of the constructor.
+
+###Delegation
+
+Basically, "delegating" tasks to another part of the program. In JS, think of **prototype chain** lookup.
+
+###Inheritance 
+
+Basically, letting objects by "a kind of" other objects. The process by which, for example, we can easily create both `Employee` and `Student` object types starting from the features of a base `Person` object type. Tomorrow!
+
+###Encapsulation
+
+Encapsulation is an *overloaded* term - it can mean a few different things.  In the context of OOP, it most often refers to keeping attributes or methods "private," instead of "public" and exposed. JS doesn't have actual private object variables but can simulate them by using a scoping setup known as a **closure**.
+
+Private variables always need *getter* and *setter* methods if they're going to be accessible from outside their scope.
+
+```
+function Person (name, realAge, feelsOld){
+  this.name = name; 
+  this.feelsOld = feelsOld;
+
+  var _realAge = realAge;  // this variable will be "private", not accessible
+  // can also make "private" function variables if your design calls for it
+
+  this.getAge = function(){
+    if (this.feelsOld){
+     return _realAge - 10
+    } else {
+     return _realAge;
+    }
+  }
+}
+
+var grandpa = new Person("Jim", 72, true);
+
+console.log("real age: ", grandpa._realAge);  // undefined
+
+console.log("'age': ",grandpa.getAge());  // 62 :D
 ```
 
 ##Constructor and Prototype Review
@@ -41,38 +92,11 @@ behaviors <--> methods (functions)
 * when you update the constructor, previously created instances DON'T update
 * data is "embedded" in each instance
 
-
-```
-function Person (name, realAge, feelsOld){
-  this.name = name; 
-  this.feelsOld = feelsOld;
-
-  var realAge = realAge;  // this variable will be "private", not accessible
-
-  this.getAge = function(){
-    if (this.feelsOld){
-     return realAge - 10
-    } else {
-     return realAge;
-    }
-  }
-}
-
-var grandpa = new Person("Jim", 72, true);
-
-console.log("real age: ", grandpa.realAge);  // undefined
-
-console.log("'age': ",grandpa.getAge());  // 62 :D
-```
-
-
 **Prototypes**
  
 * all instances share the same function and variable declarations
 * when you update the prototype, previously created instances DO get the updates
 * data is "referenced" from the prototype copy
-
-Convention:  `Array.prototype.sort = Array.prototype.sort || mySort;`
 
 **Instance variables and functions**
 
@@ -80,31 +104,51 @@ Convention:  `Array.prototype.sort = Array.prototype.sort || mySort;`
 * overwrites constructor properties/methods by replacing them
 * overwrites prototype properties/methods by being earlier on the lookup chain!
 
-
 ##Modeling with Constructors, Prototypes, Instances
 
 | Place | How it Works | Attribute Example | Method Example |
 | :-- | :--- | :--- | :--- |
 | constructor | common, each instance gets a copy at creation | usually passed in (name), sometimes calculated | rare, can access "private" variables |
-| prototype | all instances share a lookup copy | commonalities (numWheels on car), or shared data (inventoryID) | common, same behavior across instances |
-| instance | only one copy, for this instance | singularities (secretCode with a sibling) | interpretSecretCode |
+| prototype | all instances share a lookup copy | commonalities (numLegs on Dog), or shared data (numCreated) | common, same behavior across instances |
+| instance | only one copy, for this instance | singularities (secretCode with a sibling) or overwriting (3-legged dog)| rare, singularities (interpretSecretCode) |
 
-##Challenges
+Remember, when possibly overwriting an existing prototype property, always use `||`:
 
-1. Work with your table to list important attributes and methods for a Car object type.
+`Array.prototype.sort = Array.prototype.sort || mySort;`
+
+##Challenges - Modeling Cars for a Dealership
+
+For each challenge that asks you to add a variable to the Car object type, write a comment that explains why you chose to put it on the constructor, prototype, or individual car instance.
+
+1. List important attributes and methods for a Car object type.
 
 1. Create a constructor for the Car object type.
 
-1. Create a "private" `_markup` variable for the Car object type (don't want customers to see this!).  
+1. Create a "public" (normal) `location` attribute for the Car object type.  Should this be on the constructor or the prototype?
 
-1. Create a getter method and a setter for the `_markup` variable.  Should these methods be on the constructor or the prototype?
+1. Create a `drive` method for the Car object that takes in a new location and changes the car's location to that place. Should this be on the constructor or the prototype?
 
-1. Create a "public" (normal) `location` attribute for the Car object type.
+1. Create a `numWheels` variable that says how many wheels cars should have. Should this be on the constructor or the prototype?
 
-1. Create a `drive` method for the Car object. Should this be on the constructor or the prototype?
+1. Almost all of your cars are black. Create a `color` variable that stores the color of a car.  Should this be on the constructor or the prototype?
+
+1. Create an instance of a car, and change its `color`.
+
+1. Create a "private" `_priceMarkup` variable for the Car object type that stores the markup above a car's actual price (don't want customers to see this!). For example, `_priceMarkup = 0.5` would mean the final price of the car is 1.5 times its actual price. Should this be on the constructor or the prototype?
+
+1. Create a getter method and a setter for the `_priceMarkup` variable.  Should these methods be on the constructor or the prototype?
+
+1. Create a `getFinalPrice` method that returns the calculated cost of the car (based on the `price` and `_priceMarkup`). Should this be on the constructor or the prototype?
+
+1. Create an `carCount` variable that counts how many cars the dealership has entered into inventory.  Should this be on the constructor or the prototype?
+
+1. Stretch: Use `carCount` to assign an `inventoryID` to each car when it's created. A car's `inventoryID` should be unique to that car. Should this be on the constructor or the prototype? 
 
 
-##JavaScript Object Notation
+
+##Bonus: Persistant data
+
+###JavaScript Object Notation
 
 Beyond modeling with objects, we sometimes want to store data in objects or send them across the internet. For these purposes, we'll often use JSON (JavaScript Object Notation), which is a standard text representation of JavaScript Objects.  We have a method called `JSON.stringify` to automatically convert JavaScript objects into a JSON string!
 
@@ -112,7 +156,7 @@ What does JSON get us right now today?
 
 Our first opportunity for **persistent** data!
 
-##LocalStorage
+###LocalStorage
 
 `window.localStorage` is a persistent object the browser already has set up for us. Open your developer tools and take a look at your localStorage. (Note: the browser lets us access `window.localStorage` by just typing `localStorage`.)
 
@@ -135,11 +179,14 @@ Note we still don't actually have the original array. Since arrays (and all JS o
 `originalVals == testArr       // false`
 
 
+You can use `localStorage.clear()` to get rid of all of your localStorage data.
+
+
 **What about functions?**
 
 We can't store functions in localStorage, so we'll have to create new instances of objects programmatically from localStorage when we start up our site. 
 
-So if we have car data:
+<!--So if we have car data:
 
 ```
 $form.on("submit", function(event){
@@ -154,8 +201,12 @@ $form.on("submit", function(event){
 
 });
 ```
+-->
 
-You can use `localStorage.clear()` to get rid of you localStorage data.
+
+###Using LocalStorage
+
+If you're interested in using localStorage for your projects, read [MDN's guide](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) and pay special attention to their examples. 
 
 ##Later this afternoon: Modeling relationships
 
