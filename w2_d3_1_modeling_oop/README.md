@@ -117,19 +117,44 @@ Our first opportunity for **persistent** data!
 
 Try storing an array in localStorage:
 
-`localStorage.testArr = [2,3,4,5];`
+`localStorage.setItem(testArr, [2,3,4,5]);`
 
-Now check what `localStorage.testArr` is.  Like other JavaScript objects, localStorage has keys that are strings. BUT! localStorage also converts all values to strings, which can be bad for some of our data.  Let's try again using the JSON.stringify method first:
+Now check what `localStorage.getItem(testArr)` returns.  Like other JavaScript objects, localStorage has keys that are strings. BUT! localStorage also converts all values to strings, which can be bad for some of our data.  Let's try again using the JSON.stringify method first:
 
-`localStorage.testArr = JSON.stringify([2,3,4,5]);`
+`localStorage.setItem(testArr, JSON.stringify([2,3,4,5]));`
 
 What is `localStorage.testArr` now?
 
-We're getting closer to keeping our original array. All we need to do is `JSON.parse` the stored object string to turn it back into JavaScript.
+We're getting closer to keeping our original array values. We need to `JSON.parse` the stored object string to turn it back into JavaScript.
+
+`var originalVals = JSON.parse(localStorage.getItem(testArr));`
+
+Note we still don't actually have the original array. Since arrays (and all JS objects) are reference types, their identity is tied to the location they're stored in your computer's memory. We only got back the values.
+
+`originalVals == testArr       // false`
+
 
 **What about functions?**
 
-We can't store functions in localStorage, so we'll have to create new instances of objects programmatically from localStorage when we start up the site. 
+We can't store functions in localStorage, so we'll have to create new instances of objects programmatically from localStorage when we start up our site. 
+
+So if we have car data:
+
+```
+$form.on("submit", function(event){
+  // create new object 
+  new car = {
+      make: $makeInput.val(), 
+      model: $modelInput.val(),
+      price: $priceInput.val(),
+      sold: false
+  }
+  // push into array
+
+});
+```
+
+You can use `localStorage.clear()` to get rid of you localStorage data.
 
 ##Later this afternoon: Modeling relationships
 
@@ -162,7 +187,7 @@ var gal = new Person("Annie", "Oakley", 828);
 
 var iPhone6 = new CellPhone("iPhone", "6", 649.99);
 
-guy.buyStuff(iPhone6);
+gal.buyStuff(iPhone6);
 
 ```
 
