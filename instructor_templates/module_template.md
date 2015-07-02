@@ -12,7 +12,7 @@
 
 ### Analogy (What?)
 
-### Key Take Aways & Key Snippets
+### Key Snippets
 
 #Challenges
 
