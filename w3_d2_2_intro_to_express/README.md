@@ -30,7 +30,7 @@ A web server is like a restaurant. The views are the menu. The controllers are t
 2. The controller tells the cook
 3. The cook gets what she needs from the refrigerator, makes the dish and sends it back with the waiter to the user.
 
-# Demo & Learning Activities
+# Examples & Key Take Aways
 
 #Challenges
 

@@ -12,7 +12,7 @@
 
 ### Analogy (What?)
 
-# Examples & Key Take Aways
+### Key Take Aways & Key Snippets
 
 #Challenges
 
