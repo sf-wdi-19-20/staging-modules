@@ -64,7 +64,7 @@ Encapsulation is an *overloaded* term - it can mean a few different things.  In 
 
 Private variables always need *getter* and *setter* methods if they're going to be accessible from outside their scope.
 
-```
+```js
 function Person (name, realAge, feelsOld){
   this.name = name; 
   this.feelsOld = feelsOld;
@@ -111,11 +111,13 @@ console.log("'age': ",grandpa.getAge());  // 62 :D
 
 ##Modeling with Constructors, Prototypes, Instances
 
-| Place | How it Works | Attribute Example | Method Example |
+| Place | How it Works | Attribute | Method |
 | :-- | :--- | :--- | :--- |
-| constructor | common, each instance gets a copy at creation | usually passed in (name), sometimes calculated | rare, can access "private" variables |
-| prototype | all instances share a lookup copy | commonalities (numLegs on Dog), or shared data (numCreated) | common, same behavior across instances |
-| instance | only one copy, for this instance | singularities (secretCode with a sibling) or overwriting (3-legged dog)| rare, singularities (interpretSecretCode) |
+| IN constructor function | each instance gets a copy at creation | usually passed in (name), sometimes default value or calculted | rarely used. can access "private" variables w/ closure |
+| prototype | all instances share a lookup copy | shared features (numLegs of Dog; species of Person)| commonly used. same behavior across instances, based on `this` |
+| instance | only one copy, for this instance | singularities (secretCode with a sibling) or overwriting (3-legged dog)| rarely used. singularities (interpretSecretCode) |
+| ON constructor | one copy accessible through the object type | depends on multiple/all instances (all or count) | depends on multiple instances (displayAll) |
+
 
 Remember, when possibly overwriting an existing prototype property, always use `||`:
 
@@ -215,7 +217,7 @@ If you're interested in using localStorage for your projects, read [MDN's guide]
 
 ##Later this afternoon: Modeling relationships
 
-```
+```js
 function Person (first_name, last_name, money){
   this.first_name = first_name;
   this.last_name = last_name; 
@@ -231,7 +233,7 @@ Person.prototype.buyStuff = function(newStuff, cost){
 }
 ```
 
-```
+```js
 function CellPhone(make, model, price){
  this.make = make;
  this.model = model;
@@ -239,7 +241,7 @@ function CellPhone(make, model, price){
 }
 ```
 
-```
+```js
 var gal = new Person("Annie", "Oakley", 828);
 
 var iPhone6 = new CellPhone("iPhone", "6", 649.99);
